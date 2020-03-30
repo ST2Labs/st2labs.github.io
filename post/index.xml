@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
     <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
-    <lastBuildDate>Tue, 01 Oct 2019 09:39:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 18:31:07 +0200</lastBuildDate>
     
 	<atom:link href="https://st2labs.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Migration</title>
+      <link>https://st2labs.github.io/post/2020-30-03-migration/</link>
+      <pubDate>Mon, 30 Mar 2020 18:31:07 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2020-30-03-migration/</guid>
+      <description>Es oficial, acabo de migrar el contenido del Blog desde Blogger a GitHub Pages, utilizando Hugo.
+! Muchas Gracias !</description>
+    </item>
     
     <item>
       <title>Guia rápida para realizar un Pentesting</title>
