@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ciberseguridad on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/ciberseguridad/</link>
+    <description>Recent content in Ciberseguridad on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Tue, 30 Dec 2014 12:31:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/ciberseguridad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Feliz IV Navidad | Merry xMaS</title>
+      <link>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</link>
+      <pubDate>Tue, 30 Dec 2014 12:31:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</guid>
+      <description>**Ya son las IV (4) Navidades juntos
+!!!!!**
+¡Cómo pasa el tiempo¡ , sigo y seguiré compartiendo los buenos momentos
+con todos vosotros a través del Blog y Twitter
+@seguridadxato2
+@st2labs
+Finalizo el año ilusionado con el nuevo proyecto de vigilancia de
+páginas WEB (webguardshield.com) y con
+la vista puesta en el lanzamiento de
+secnapsis.com | Si olvidarme de mis alumnos del
+Máster de Seguridad TIC que en su</description>
+    </item>
+    
+    <item>
+      <title>Android IMSI-Catcher-Detector AIMSICD</title>
+      <link>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</link>
+      <pubDate>Thu, 23 Oct 2014 18:16:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</guid>
+      <description>Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H+/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.</description>
+    </item>
+    
+    <item>
+      <title>SSS REVOLUTION [S]HELSHOCK,[S]SLV3 POODLE ATTACK Y [S]ANDWORM</title>
+      <link>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</link>
+      <pubDate>Wed, 15 Oct 2014 19:27:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</guid>
+      <description>Estaba yo desempolvando el teclado cuando en un abrir y cerrar de ojos,
+aparecen las [SSS] como si de la santísima trinidad se tratase,
+primero Shellshock, despues Sandworm (0-day en sistemas Windows )y ahora
+cifrado SSLv3, si juntas las tres vulnerabilidades se da el apocalisis
+de Internet, de hecho casi poco ese título en lugar del actual, pero
+entonces parecería un Blog con tintes religiosos, y no quisiera yo que</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sevilla on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/sevilla/</link>
+    <description>Recent content in Sevilla on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Fri, 03 Jul 2015 20:25:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/sevilla/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación</title>
+      <link>https://st2labs.github.io/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/</link>
+      <pubDate>Fri, 03 Jul 2015 20:25:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/</guid>
+      <description>! Cómo pasa el tiempo ¡ Ya ésta aquí la tercera edición del Máster
+Seguridad de la Comunicaciones y la Información (#MSTIC16) donde
+impartiré la clase práctica de Técnicas de
+Hacking y Pentesting, cómo **novedad este año
+las 5 clases que impartiré serán totalmente en el laboratorio**,
+con ejemplo y casos prácticos donde los alumnos se enfrentaran a casos
+reales, aprenderán a manejar las herramientas, interpretar los
+resultados y resolver problemas en entorno reales.</description>
+    </item>
+    
+    <item>
+      <title>II Jornada de Seguridad en las Comunicaciones y la Información</title>
+      <link>https://st2labs.github.io/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/</link>
+      <pubDate>Sat, 23 May 2015 18:45:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/</guid>
+      <description>El próximo 9/Junio estaré impartiendo un Taller práctico sobre
+Metasploit en la Escuela Técnica Superior de Ingeniera de Sevilla, !!
+sólo 100 plazas ¡¡¡ A continuación toda la información que necesitas
+saber, daros prisa, además tendréis un diploma de asistencia.
+Objetivo
+Jornada especialmente dirigido a Ingeniería de Telecomunicaciones e
+Ingeniería Informática, esta jornada pretende dar a conocer a los
+alumnos de últimos cursos el modelo de negocio de la seguridad en las</description>
+    </item>
+    
+  </channel>
+</rss>

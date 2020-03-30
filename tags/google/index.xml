@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/google/</link>
+    <description>Recent content in Google on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Sat, 20 Jun 2015 19:13:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Hacking Parte II</title>
+      <link>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</link>
+      <pubDate>Sat, 20 Jun 2015 19:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</guid>
+      <description>****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma, sans-serif;&amp;ldquo;&amp;gt;, donde habíamos introducido
+los operadores que nos permiten exprimir al máximo este famoso buscador.
+Hoy veremos ejemplos sencillos de como podemos utilizar estos
+operadores.
+****
+&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&amp;ldquo;&amp;gt;Listado
+de directorios
+Una de las acciones
+habituales a la hora de mejorar la seguridad de un sitio web, es</description>
+    </item>
+    
+    <item>
+      <title>Password Alert: Plugin para Google Chrome - Protege tus cuentas de Google</title>
+      <link>https://st2labs.github.io/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/</link>
+      <pubDate>Fri, 01 May 2015 13:06:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/</guid>
+      <description>Si eres de los que utiliza Google Chrome como navegador por defecto a
+diario en casa y el trabajo, te recomiendo que sigas leyendo.
+**&amp;ndash; Google Chrome Plugins - Password
+Alert**
+Google presenta una extensión para Google Chrome que te ayudará a
+protegerte frente a ataques de phishing que intentan conseguir tu
+contraseña de acceso a las cuentas de Google.
+ *Alerta de protección de contraseña te ayuda a protegerte contra</description>
+    </item>
+    
+    <item>
+      <title>Rooting my Nexus 4 with Android 5.0.1</title>
+      <link>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</link>
+      <pubDate>Sun, 12 Apr 2015 11:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</guid>
+      <description>Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your system [ I supposed you have Windows]
+ 2
+. **Enable
+USB Debbugin Options** ( press 7 times in build info into Settings Menu
+)
+3 . Need have Bootloader unlocked, if you don&amp;rsquo;t, please check out</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/web/</link>
+    <description>Recent content in Web on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Sat, 20 Jun 2015 19:13:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Hacking Parte II</title>
+      <link>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</link>
+      <pubDate>Sat, 20 Jun 2015 19:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</guid>
+      <description>****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma, sans-serif;&amp;ldquo;&amp;gt;, donde habíamos introducido
+los operadores que nos permiten exprimir al máximo este famoso buscador.
+Hoy veremos ejemplos sencillos de como podemos utilizar estos
+operadores.
+****
+&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&amp;ldquo;&amp;gt;Listado
+de directorios
+Una de las acciones
+habituales a la hora de mejorar la seguridad de un sitio web, es</description>
+    </item>
+    
+    <item>
+      <title>Feliz IV Navidad | Merry xMaS</title>
+      <link>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</link>
+      <pubDate>Tue, 30 Dec 2014 12:31:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</guid>
+      <description>**Ya son las IV (4) Navidades juntos
+!!!!!**
+¡Cómo pasa el tiempo¡ , sigo y seguiré compartiendo los buenos momentos
+con todos vosotros a través del Blog y Twitter
+@seguridadxato2
+@st2labs
+Finalizo el año ilusionado con el nuevo proyecto de vigilancia de
+páginas WEB (webguardshield.com) y con
+la vista puesta en el lanzamiento de
+secnapsis.com | Si olvidarme de mis alumnos del
+Máster de Seguridad TIC que en su</description>
+    </item>
+    
+    <item>
+      <title>Análisis de Vulnerabilidades WEB y los falsos positivos </title>
+      <link>https://st2labs.github.io/post/2014-11-05-analisis-de-vulnerabilidades-web-y-los-falsos-positivos/</link>
+      <pubDate>Wed, 05 Nov 2014 20:27:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-11-05-analisis-de-vulnerabilidades-web-y-los-falsos-positivos/</guid>
+      <description>En el Análisis de Vulnerabilidades es muy frecuente que se realicen
+varios test / scanner con diferentes herramientas para llevar a cabo una
+eliminación de falsos positivos (especialmente durante Auditorias de
+Seguridad a aplicación WEB). Una vez tienes el resultado, se verifican
+manualmente los resultados con objeto de ofrecer un informe con el
+mínimo número de falsos positivos posibles.
+En un CSIRT (*&amp;lt;span
+style=&amp;ldquo;background-color: white; color: #252525; font-family: sans-serif; font-size: 14px; line-height: 22.</description>
+    </item>
+    
+  </channel>
+</rss>

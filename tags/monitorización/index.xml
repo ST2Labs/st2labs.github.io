@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitorización on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/monitorizaci%C3%B3n/</link>
+    <description>Recent content in Monitorización on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Thu, 17 Mar 2016 11:30:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/monitorizaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SVTCloud Monitoring &amp; Security Operations Center (MSOC)</title>
+      <link>https://st2labs.github.io/post/2016-03-17-svtcloud-monitoring-security-operations-center-msoc/</link>
+      <pubDate>Thu, 17 Mar 2016 11:30:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2016-03-17-svtcloud-monitoring-security-operations-center-msoc/</guid>
+      <description>Presentación
+Desde el pasado mes de
+Febrero, tengo el placer de trabajar en
+@SVTCloud&amp;lt;span
+style=&amp;ldquo;text-align: justify;&amp;ldquo;&amp;gt; (www.svtcloud.com&amp;lt;span
+style=&amp;ldquo;text-align: justify;&amp;ldquo;&amp;gt;) como el responsable del servicio y
+departamento de Monitorización y Operaciones de Seguridad
+(MSOC).
+Entre otros, el equipo de Seguridad del MSOC, ofrece los servicios:
+ - PSaaS - Perimetral Security as a Service, que consiste en la
+gestión operativa de dispositivos de seguridad perimetral en modo
+servicio.
+- Alerta Temprana: realizando una monitorización constante 24x7,</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Python para Hacking (I) - Run a secure Shell command  - Seguridad para Todos</title>
+  <meta name="description" content="Ahora que estoy de vacaciones (bendita semana santa) he sacado un hueco
+para terminar uno de los muchos artículos que tengo pensado escribir
+sobre el lenguaje de programación python, donde a pesar de ser yo un
+recién llegado al mundo python, ya me siento extremadamente cómodo
+programando en python, hasta tal punto que se ha convertido en mi
+lenguaje favorito.
+En artículos anteriores os hable de como usar python como lenguaje de">
+  <meta name="author" content="Julian J Gonzalez"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Seguridad para Todos",
+    
+    "url": "https://st2labs.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://st2labs.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://st2labs.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://st2labs.github.io/post/2015-04-02-python-para-hacking-i-run-a-secure-shell-command/",
+          "name": "Python para hacking ( i) run a secure shell command "
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Julian J. Gonzalez"
+  },
+  "headline": "Python para Hacking (I) - Run a secure Shell command ",
+  "description" : "Ahora que estoy de vacaciones (bendita semana santa) he sacado un hueco
+para terminar uno de los muchos artículos que tengo pensado escribir
+sobre el lenguaje de programación python, donde a pesar de ser yo un
+recién llegado al mundo python, ya me siento extremadamente cómodo
+programando en python, hasta tal punto que se ha convertido en mi
+lenguaje favorito.
+En artículos anteriores os hable de como usar python como lenguaje de",
+  "inLanguage" : "es",
+  "wordCount": 599,
+  "datePublished" : "2015-04-02T13:36:00",
+  "dateModified" : "2015-04-02T13:36:00",
+  "image" : "https://st2labs.github.io/img/st2400x400.jpg",
+  "keywords" : [ "PYH1, Run, Shell, Hacking, Python, Programacion, Commands" ],
+  "mainEntityOfPage" : "https://st2labs.github.io/post/2015-04-02-python-para-hacking-i-run-a-secure-shell-command/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://st2labs.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://st2labs.github.io/img/st2400x400.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Python para Hacking (I) - Run a secure Shell command " />
+<meta property="og:description" content="Ahora que estoy de vacaciones (bendita semana santa) he sacado un hueco
+para terminar uno de los muchos artículos que tengo pensado escribir
+sobre el lenguaje de programación python, donde a pesar de ser yo un
+recién llegado al mundo python, ya me siento extremadamente cómodo
+programando en python, hasta tal punto que se ha convertido en mi
+lenguaje favorito.
+En artículos anteriores os hable de como usar python como lenguaje de">
+<meta property="og:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+<meta property="og:url" content="https://st2labs.github.io/post/2015-04-02-python-para-hacking-i-run-a-secure-shell-command/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Seguridad para Todos" />
+
+  <meta name="twitter:title" content="Python para Hacking (I) - Run a secure Shell command " />
+  <meta name="twitter:description" content="Ahora que estoy de vacaciones (bendita semana santa) he sacado un hueco
+para terminar uno de los muchos artículos que tengo pensado escribir
+sobre el lenguaje de programación python, donde a pesar de …">
+  <meta name="twitter:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seguridadxato2" />
+  <meta name="twitter:creator" content="@seguridadxato2" />
+  <link href='https://st2labs.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://st2labs.github.io/index.xml" type="application/rss+xml" title="Seguridad para Todos"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://st2labs.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://st2labs.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://st2labs.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26021994-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://st2labs.github.io">Seguridad para Todos</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Seguridad para Todos" href="https://st2labs.github.io">
+            <img class="avatar-img" src="https://st2labs.github.io/img/st2400x400.jpg" alt="Seguridad para Todos" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Python para Hacking (I) - Run a secure Shell command </h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 2 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;599&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="../images/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_head.png"><img src="../images/thumbnails/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_head.png" alt="" /></a></p>
+
+<p>Ahora que estoy de vacaciones (bendita semana santa) he sacado un hueco</p>
+
+<p>para terminar uno de los muchos artículos que tengo pensado escribir</p>
+
+<p>sobre el lenguaje de programación <strong>python,</strong> donde a pesar de ser yo un</p>
+
+<p>recién llegado al mundo python, ya me siento extremadamente cómodo</p>
+
+<p>programando en python, hasta tal punto que se ha convertido en mi</p>
+
+<p>lenguaje favorito.</p>
+
+<p>En artículos anteriores os hable de como usar python como lenguaje de</p>
+
+<p>Hacking, al hilo de los mismos, os voy a introducir en algunos conceptos</p>
+
+<p>y/o comandos de python de utilidad en el área de la Seguridad</p>
+
+<p>Informática, como por ejemplo ejecutar comandos del sistema de forma</p>
+
+<p>segura (evitando inyección arbitraria de comandos) desde un programa</p>
+
+<p>escrito en python.</p>
+
+<p><strong><span style="font-size: large;">Introducción</span></strong></p>
+
+<p>Cuando aprendes a programar lo habitual es empezar con el lenguaje</p>
+
+<p>pseudo-código y C, en mi experiencia programando, de C pase a emsablador</p>
+
+<p>Morotorla 6880 y luego C++; en el momento que empiezas a utilizar la</p>
+
+<p>programación orientada a Objetos descubres los beneficios e</p>
+
+<p>inconvenientes de los cuales no os voy a hablar. Lo mejor de python es</p>
+
+<p>la flexibilidad, rapidez e ingente cantidad de recursos disponibles con</p>
+
+<p>los que contar.</p>
+
+<p>Tras probar varios lenguajes de programación (con sus contras y sus</p>
+
+<p>pros) me quedo con python, siendo este el inicio de una serie de</p>
+
+<p>artículos o publicaciones, donde os mostrare algunos ejemplos prácticos</p>
+
+<p>de programación en python (orientados a hacking), como es el caso de</p>
+
+<p>éste artículo, donde vamos a ver como leer los puertos abiertos del</p>
+
+<p>sistema (listening port).</p>
+
+<p><strong><span style="font-size: large;">¿ Por donde empiezo ?</span></strong></p>
+
+<p>Existen al menos tres maneras distintas de ejecutar un comando del</p>
+
+<p>sistema desde un programa escrito en python, la primera es utilizando</p>
+
+<p>las librerías del sistema <strong>os, </strong>la segunda, utilizando la librería</p>
+
+<p><strong><a href="https://docs.python.org/2/library/subprocess.html">subprocess</a></strong> y la</p>
+
+<p>tercera, es utilizando la librería <strong>commands.</strong></p>
+
+<p>Vamos a ilustrar con algunos ejemplos prácticos la utilización de las</p>
+
+<p>diferentes librerías. Sin embargo, tanto como la librerías commands,</p>
+
+<p>como la librería os, ha sido sustituidas por subprocess, por lo que</p>
+
+<p>centraré los ejemplos en <strong>subprocess</strong>.</p>
+
+<p><span style="font-size: x-small;">Nota: Los ejemplos estan preparados</p>
+
+<p>para funcionar solamente en sistemas UNIX, </span></p>
+
+<p><span style="font-size: x-small;">No obstante, las librerías commands, y</p>
+
+<p>os, ha sido sustituidas por subprocess.</span></p>
+
+<p><strong><span style="font-size: large;">Ejemplo 1</span></strong></p>
+
+<p>Ejecutar cualquier comando del sistema a través de un programa escrito</p>
+
+<p>con python (run a system command through python script), en el ejemplo</p>
+
+<p>se ha utilizado &ldquo;ls -lsa&rdquo;, para listar el contenido de un directorio.</p>
+
+<p><strong>CODE_</strong></p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e1_2.png"><img src="../images/thumbnails/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e1_2.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">Example python code - <strong>e1-py</strong></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p><strong>OUT_</strong></p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e1_1.png"><img src="../images/thumbnails/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e1_1.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">Example 1: e1.py - Run system command from python</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p><strong>Nota:</strong></p>
+
+<p><span style="font-size: x-small;">Passing <code>shell=True</code> can be a security</p>
+
+<p>hazard if combined with untrusted input ([read</p>
+
+<p>about](<a href="https://docs.python.org/2/library/subprocess.html))">https://docs.python.org/2/library/subprocess.html))</a></span></p>
+
+<p><strong><span style="font-size: large;">Ejemplo 2</span></strong></p>
+
+<p>Ejecuta cualquier comando introducido por el usuario desde el teclado o</p>
+
+<p>STDIN !</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e2_2.png"><img src="../images/thumbnails/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e2_2.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">Example python code - <strong>e2.py</strong></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p><strong>Nota:</strong></p>
+
+<p><span style="font-size: x-small;">Passing <code>shell=True</code> can be a security</p>
+
+<p>hazard if combined with untrusted input </span></p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;font-family: sans-serif; font-size: x-small; line-height: 20.7999992370605px;&ldquo;&gt;(</span>[read</p>
+
+<p>about](<a href="https://docs.python.org/2/library/subprocess.html">https://docs.python.org/2/library/subprocess.html</a>)&lt;span</p>
+
+<p>style=&ldquo;font-family: sans-serif; font-size: x-small; line-height: 20.7999992370605px;&ldquo;&gt;)</span></p>
+
+<p><strong>OUT_</strong></p>
+
+<p>**</p>
+
+<p>**Running cat /etc/passwd</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e2_1.png"><img src="../images/thumbnails/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e2_1.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">Example 2: run cat /etc/passwd command from python code</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p><strong><span style="font-size: large;">Ejemplo 3: </span></strong></p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p>Ejecutar y mostrar el resultado de listar los archivos de un directorio</p>
+
+<p>&ldquo;ls -ls&rdquo;, utilizando parametrización del comando y usando tuberías en</p>
+
+<p>lugar de ejecución directa en la SHELL, es una forma más segura de</p>
+
+<p>ejecutar comandos directamente en sistema, evitando ataques de COMMAND</p>
+
+<p>OS Injection sobre vuestro código, claro esta que esto es meramente un</p>
+
+<p>ejemplo didáctico y las diferencias entre los ejemplos son minimamente</p>
+
+<p>significativas.</p>
+
+<p><strong>CODE_</strong></p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e3_2.png"><img src="../images/thumbnails/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e3_2.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">Example python code - <strong>e3.py</strong></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>**</p>
+
+<p>**</p>
+
+<p><strong>Ejecución</strong></p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p>ST2Labs &gt; python e3.py</p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p><strong>OUT_</strong></p>
+
+<p>**</p>
+
+<p>**</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e3_1.png"><img src="../images/thumbnails/2015-04-02-python-para-hacking-i-run-a-secure-shell-command-ST2Labs_Hacking_IV_e3_1.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">Example 3 - Run a secure system command.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>Todos los ejemplos los puedes descargar desde mi repositorio ST2Labs en</p>
+
+<p>GitHub (<a href="https://github.com/ST2Labs/ST2Example">https://github.com/ST2Labs/ST2Example</a>).</p>
+
+<p><strong>#ST2Labs</strong></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://st2labs.github.io/tags/pyh1/">PYH1</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/run/">Run</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/shell/">Shell</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/hacking/">Hacking</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/python/">Python</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/programacion/">Programacion</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/commands/">Commands</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-02-python-para-hacking-i-run-a-secure-shell-command%2f&amp;text=Python%20para%20Hacking%20%28I%29%20-%20Run%20a%20secure%20Shell%20command%20&amp;via=seguridadxato2" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-02-python-para-hacking-i-run-a-secure-shell-command%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-02-python-para-hacking-i-run-a-secure-shell-command%2f&amp;title=Python%20para%20Hacking%20%28I%29%20-%20Run%20a%20secure%20Shell%20command%20" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-02-python-para-hacking-i-run-a-secure-shell-command%2f&amp;title=Python%20para%20Hacking%20%28I%29%20-%20Run%20a%20secure%20Shell%20command%20" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-02-python-para-hacking-i-run-a-secure-shell-command%2f&amp;title=Python%20para%20Hacking%20%28I%29%20-%20Run%20a%20secure%20Shell%20command%20" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-02-python-para-hacking-i-run-a-secure-shell-command%2f&amp;description=Python%20para%20Hacking%20%28I%29%20-%20Run%20a%20secure%20Shell%20command%20" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/">Guia rápida para realizar un Pentesting</a></li>
+                
+                    <li><a href="/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/">Feliz Navidad with Custom Python Reverse Shell</a></li>
+                
+                    <li><a href="/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/">3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación</a></li>
+                
+                    <li><a href="/post/2015-06-20-google-hacking-parte-ii/">Google Hacking Parte II</a></li>
+                
+                    <li><a href="/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/">II Jornada de Seguridad en las Comunicaciones y la Información</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://st2labs.github.io/post/2015-01-23-taller-de-iniciacion-al-hacking-etico/" data-toggle="tooltip" data-placement="top" title="Taller de Iniciación al Hacking Ético">&larr; Artículo anterior</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://st2labs.github.io/post/2015-04-08-como-elegir-un-antivirus/" data-toggle="tooltip" data-placement="top" title="¿Cómo elegir un Antivirus?">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:info@seguridadparatodos.es" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/st2labs" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/seguridadxato2" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/julianjgonzalez" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="www.st2labs.com">Julian J Gonzalez</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://st2labs.github.io">Seguridad para Todos</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.54.0</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://st2labs.github.io/js/main.js"></script>
+<script src="https://st2labs.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://st2labs.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3g on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/3g/</link>
+    <description>Recent content in 3g on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Fri, 10 Apr 2015 15:10:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/3g/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense</title>
+      <link>https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/</link>
+      <pubDate>Fri, 10 Apr 2015 15:10:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/</guid>
+      <description>Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
+Redes Móviles, en dicha charla os comentaba las debilidades /
+vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado en diciembre de 2014, durante el congreso del [Chaos
+Computer
+Club](http://events.ccc.de/congress/2014/wiki/Static:Main_Page), los
+investigadores de Security ReseachLabs **han
+publicado una vez más las debilidades existentes** en las redes móviles
+actuales, y además, han creado un par de proyectos software libre, el</description>
+    </item>
+    
+    <item>
+      <title>Android IMSI-Catcher-Detector AIMSICD</title>
+      <link>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</link>
+      <pubDate>Thu, 23 Oct 2014 18:16:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</guid>
+      <description>Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H+/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>It Security on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/it-security/</link>
+    <description>Recent content in It Security on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Tue, 01 Oct 2019 09:39:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/it-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Guia rápida para realizar un Pentesting</title>
+      <link>https://st2labs.github.io/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/</link>
+      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/</guid>
+      <description>Autor: [Israel
+Nada](https://twitter.com/perito_inf/status/1178741955561492481)l
+A través de su cuenta de Twitter, publico un hilo donde explicaba de
+forma sencilla y concreta, su metodología para realizar un Pentesting.
+Guía para realizar un Pentesting de Israel Nadal
+ESCANEO DE LA RED &amp;lt;span
+style=&amp;ldquo;background-color: #f5f8fa; color: #14171a; font-family: system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 15px; white-space: pre-wrap;&amp;ldquo;&amp;gt;nmap
+-sn 10.11.1.* nmap -sL 10.11.1.* nbtscan -r 10.11.1.0/24 smbtree
+netdiscover</description>
+    </item>
+    
+    <item>
+      <title>[cymon-analyzer] | Modulo de Análisis Reputación IP en Cymon.io para Cortex Engine | theHive-project</title>
+      <link>https://st2labs.github.io/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/</link>
+      <pubDate>Thu, 14 Sep 2017 12:10:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/</guid>
+      <description>[
+](https://1.bp.blogspot.com/-kZ6n4TsSZ8M/WbpPZgBjirI/AAAAAAAAefc/ZBbTpyBlC7UwHm1BT1OGusI5hv_eO7xVQCLcBGAs/s1600/TheHive%2BProject%2B-%2BHead.png)
+Cuando eres un Tier1/L2 SOC Security Analyst disponer de la mejor
+herramienta para la toma de decisiones es fundamental con objeto de
+&amp;ldquo;responde&amp;rdquo; ante una Amenaza de la mejor forma y lo más rápido posible.
+En mi paso como &amp;ldquo;Manager&amp;rdquo; del antiguo equipo del **Centro de
+Inteligencia y Operaciones de Seguridad, denominado SSIC** por la siglas
+(SVT Security Intelligence &amp;amp; Operations Center), se indicaba que la</description>
+    </item>
+    
+    <item>
+      <title>[SIPI] Simple IP Information Tool is out</title>
+      <link>https://st2labs.github.io/post/2016-04-01-sipi-simple-ip-information-tool-is-out/</link>
+      <pubDate>Fri, 01 Apr 2016 16:36:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2016-04-01-sipi-simple-ip-information-tool-is-out/</guid>
+      <description>Cuando se reciben miles de ataques desde Internet, es necesario disponer
+de información que permita tomar decisiones de una forma ágil y rápida.
+En un CERT/SOC, es decir en un centro de operaciones de ciberseguridad,
+es primordial disponer de información sobre una posible amenaza para
+ejecutar acciones y/o medidas de prevención, protección y defensa.
+Introducción
+Por ejemplo, se detecta un tcp_scan en el IPS / Cortafuegos:
+    FortiAnalyzer - Event Manager - IPS    A priori no se sabe si es lícito o no, para resolver el misterio se</description>
+    </item>
+    
+    <item>
+      <title>VENOM Vulnerability - All VM are in Risk? (CVE-2015-3456) </title>
+      <link>https://st2labs.github.io/post/2015-05-14-venom-vulnerability-all-vm-are-in-risk-cve-2015-3456/</link>
+      <pubDate>Thu, 14 May 2015 18:30:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-14-venom-vulnerability-all-vm-are-in-risk-cve-2015-3456/</guid>
+      <description>VENOM (CVE-2015-3456)
+is (Virtualized Eniroment Negleted Operations Manipulation), lo que
+viene a decir, que se ha descubierto una vulnerabilidad que permite
+acceder por completo al entorno de ejecución del hipervisor desde una
+máquina virtual cualquiera, lo que significa acceder por completo al
+entorno de ejecución del resto de máquina virtuales que tiene el Host en
+ejecución.
+Xen Security Advisory CVE-2015-3456 / XSA-133 version 2 Privilege escalation via emulated floppy disk drive A continuación un ejemplo gráfico que ilustrará en que consiste la</description>
+    </item>
+    
+  </channel>
+</rss>

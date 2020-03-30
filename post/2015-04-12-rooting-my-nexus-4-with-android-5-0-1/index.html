@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Rooting my Nexus 4 with Android 5.0.1 - Seguridad para Todos</title>
+  <meta name="description" content="Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your system [ I supposed you have Windows]
+ 2
+. **Enable
+USB Debbugin Options** ( press 7 times in build info into Settings Menu
+)
+3 . Need have Bootloader unlocked, if you don&rsquo;t, please check out">
+  <meta name="author" content="Julian J Gonzalez"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Seguridad para Todos",
+    
+    "url": "https://st2labs.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://st2labs.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://st2labs.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/",
+          "name": "Rooting my nexus 4 with android 5.0.1"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Julian J. Gonzalez"
+  },
+  "headline": "Rooting my Nexus 4 with Android 5.0.1",
+  "description" : "Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your system [ I supposed you have Windows]
+ 2
+. **Enable
+USB Debbugin Options** ( press 7 times in build info into Settings Menu
+)
+3 . Need have Bootloader unlocked, if you don&amp;rsquo;t, please check out",
+  "inLanguage" : "es",
+  "wordCount": 576,
+  "datePublished" : "2015-04-12T11:13:00",
+  "dateModified" : "2015-04-12T11:13:00",
+  "image" : "https://st2labs.github.io/img/st2400x400.jpg",
+  "keywords" : [ "Nexus, cyanogen, Google, Custom, Android, LG, Mobile, lolipop, Root, Security, ROM, Rooting" ],
+  "mainEntityOfPage" : "https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://st2labs.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://st2labs.github.io/img/st2400x400.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Rooting my Nexus 4 with Android 5.0.1" />
+<meta property="og:description" content="Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your system [ I supposed you have Windows]
+ 2
+. **Enable
+USB Debbugin Options** ( press 7 times in build info into Settings Menu
+)
+3 . Need have Bootloader unlocked, if you don&rsquo;t, please check out">
+<meta property="og:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+<meta property="og:url" content="https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Seguridad para Todos" />
+
+  <meta name="twitter:title" content="Rooting my Nexus 4 with Android 5.0.1" />
+  <meta name="twitter:description" content="Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your …">
+  <meta name="twitter:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seguridadxato2" />
+  <meta name="twitter:creator" content="@seguridadxato2" />
+  <link href='https://st2labs.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://st2labs.github.io/index.xml" type="application/rss+xml" title="Seguridad para Todos"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://st2labs.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://st2labs.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://st2labs.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26021994-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://st2labs.github.io">Seguridad para Todos</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Seguridad para Todos" href="https://st2labs.github.io">
+            <img class="avatar-img" src="https://st2labs.github.io/img/st2400x400.jpg" alt="Seguridad para Todos" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Rooting my Nexus 4 with Android 5.0.1</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 12 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;576&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-ST2_Rooting_head.png"><img src="../images/thumbnails/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-ST2_Rooting_head.png" alt="" /></a></p>
+
+<p>Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo</p>
+
+<p>así para ampliar el público objetivo :</p>
+
+<p><a href="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-android-5.0-settings-developer-options.jpg"><img src="../images/thumbnails/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-android-5.0-settings-developer-options.jpg" alt="" /></a></p>
+
+<p>First of all, **<span style="font-size: large;">What do you need to</p>
+
+<p>start?</span>**</p>
+
+<blockquote>
+<p>1 . **Have <a href="http://developer.android.com/sdk/win-usb.html">USB Driver</a></p>
+
+<p>installed** in your system [ I supposed you have Windows]</p>
+</blockquote>
+
+<p>2</p>
+
+<p>. **<a href="http://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android-5-lollipop.htm">Enable</a></p>
+
+<p>USB Debbugin Options** ( press 7 times in build info into Settings Menu</p>
+
+<p>)</p>
+
+<p>3 . <strong>Need have Bootloader unlocked</strong>, if you don&rsquo;t, please check out</p>
+
+<p>this link.</p>
+
+<p>Now you are ready to reborn your old Nexus Smartphone, get rooting o</p>
+
+<p>install custom recovery tool.</p>
+
+<p>I would like to get rooting into my Nexus 4, because some security tool</p>
+
+<p>need have to access root to works well. And time ago I wrote this post</p>
+
+<p>about it &ldquo;root or not?&rdquo; ([check out this</p>
+
+<p>link](<a href="http://www.seguridadparatodos.es/2013/08/seguridad-moviles-root-or-not.html">http://www.seguridadparatodos.es/2013/08/seguridad-moviles-root-or-not.html</a>)</p>
+
+<ul>
+<li>in spanish only).
+
+
+
+<br /></li>
+</ul>
+
+<p><span style="font-size: large;"><strong>[ Get Root ]</strong></span></p>
+
+<p>Before start, is interesting what you make a backup to be protected if</p>
+
+<p>something go wrong!</p>
+
+<blockquote>
+<p>1. Need have battery more than 70%</p>
+
+<ol>
+<li>Download [Wug’s Nexus Root Toolkit</li>
+</ol>
+
+<p>v2.0.](<a href="http://www.wugfresh.com/nrt/)5">http://www.wugfresh.com/nrt/)5</a>.</p>
+</blockquote>
+
+<p>If you meet with requirements, you can start now:</p>
+
+<p><strong><span class="underline">Steps:</span></strong></p>
+
+<p>**<span class="underline"></p>
+
+<p></span>**<a href="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_3.png"><img src="../images/thumbnails/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_3.png" alt="" /></a></p>
+
+<blockquote>
+<p>1. Restart your smartphone into Bootloader, you can do this keep hold</p>
+
+<p>VOL Down + Power button during start the phone.</p>
+
+<p>2. Run Nexus Root Toolkit, select your model type (in my case Choose</p>
+
+<p>OCCAM-MAKO Android 5.0.1 - Build LRX22C)</p>
+
+<p>3. Plug the usb of smartphone into your windows system </p>
+
+<p>4. Press Root Button with Donwload custom loader and recovery.</p>
+
+<p>5. Wait to software detect your device </p>
+</blockquote>
+
+<p><a href="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_5.png"><img src="../images/thumbnails/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_5.png" alt="" /></a></p>
+
+<p>If all goes well, Nexus Root Toolkit will do all for you, fisrt of all</p>
+
+<p>install a boot with root files, then restart your smartphone to insert a</p>
+
+<p>root file system and install a custom recovery too. All is automatic,</p>
+
+<p>when all finish you must have your phone rooted.</p>
+
+<p><a href="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_6.png"><img src="../images/thumbnails/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_6.png" alt="" /></a></p>
+
+<p>Now, I want to reborn my Nexus 4 and I have First of All WIPE all data</p>
+
+<p>and formating the smartphone, erase all data include operating system.</p>
+
+<p>Then smartphone can&rsquo;t start before I install a nwe operating system. !!</p>
+
+<p>Becareful if you formating all data even system ¡¡</p>
+
+<p><strong><span style="font-size: large;">[ Restore Nexus 4 ]</span></strong></p>
+
+<p>You can used Nexus Root Toolkit for restore you Nexus, you have to</p>
+
+<p>install a official Google ROM, the process is:</p>
+
+<p><strong><span class="underline">Steps to Restore phone:</span></strong></p>
+
+<blockquote>
+<p><strong>1. Restart smartphone with Bootloader,</strong></p>
+
+<p>You must Press Hold VOL down + Power button to obtain access. </p>
+
+<p>2. Run Nexus Root Toolkit, </p>
+
+<p><strong>Select Device</strong>: Choose OCCAM-MAKO Android 5.0.1 - Build LRX22C  </p>
+
+<p>3. Plug the USB of smartphone into the windows system </p>
+
+<p>4. Press Restore/Upgrade/Downgrade button (next image)</p>
+</blockquote>
+
+<p><a href="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_.png"><img src="../images/thumbnails/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_.png" alt="" /></a></p>
+
+<p>Software donwload automatically from Internet ROM and install into you</p>
+
+<p>mobile, !! It&rsquo;s important choose correct device ¡¡¡ and this tool is</p>
+
+<p>only for Google Nexus 4 (Mako).</p>
+
+<p><a href="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_4.png"><img src="../images/thumbnails/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-N4_tookkit_4.png" alt="" /></a></p>
+
+<p><strong><span style="font-size: large;">[ Custom ROM ]</span></strong></p>
+
+<p>Now that you have rooted your phone and custom recovery , these two</p>
+
+<p>requirements, you can install custom ROM.</p>
+
+<p>Install new ROM it&rsquo;s easy, only you can save the custom file rom</p>
+
+<p>downloaded into internal smartphone storage and restart into recovery</p>
+
+<p>mode, then you have install &ldquo;zip&rdquo; and reboot when all it&rsquo;s end.</p>
+
+<p><strong>Example:</strong></p>
+
+<table>
+
+<colgroup>
+
+<col style="width: 50%" />
+
+<col style="width: 50%" />
+
+</colgroup>
+
+<tbody>
+
+<tr class="odd">
+
+<td><a href="https://tickleservice.appspot.com/authorizedtickle?applicationId=ROM%20Manager&amp;data.url=http://get.cm/get/jenkins/90767/cm-11-20141115-SNAPSHOT-M12-mako.zip&amp;data.name=cm-11-20141115-SNAPSHOT-M12-mako.zip&amp;failure_redirect=http://rommanager.appspot.com/webconnectfailure.html&amp;success_redirect=http://rommanager.appspot.com/webconnectsuccess.html"><img src="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-rommanager.png?v=08a17" /></a>   <strong>Direct Download</strong>: <a href="https://download.cyanogenmod.org/get/jenkins/90767/cm-11-20141115-SNAPSHOT-M12-mako.zip">cm-11-20141115-SNAPSHOT-M12-mako.zip</a><br />
+
+<span class="small">md5sum: 926e5115a2ec71fd3a01e1390686f5cd      Short URL: <a href="http://get.cm/get/ldZ">http://get.cm/get/ldZ</a></span></td>
+
+<td>224.75 MB</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p><strong>Note:</strong> You must enabled again &ldquo;USB Debbuging options&rdquo; once you had</p>
+
+<p>installed a new ROM, even if new ROM haven&rsquo;t root access, you must do</p>
+
+<p>the &ldquo;root process&rdquo; again.</p>
+
+<p><strong>I recommend install AFWall+</strong> (Android Firewall based on IPtables) so</p>
+
+<p>you can control the network traffic flow in your device and help you to</p>
+
+<p>protect you against any authorized connection.</p>
+
+<p><a href="https://play.google.com/store/apps/details?id=dev.ukanth.ufirewall"><img src="../images/2015-04-12-rooting-my-nexus-4-with-android-5-0-1-Root_AFwall_ST2labs.png" alt="" /></a></p>
+
+<p>#ST2Labs</p>
+
+<p>#Nexus4</p>
+
+<p>#Android</p>
+
+<p>#Security</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://st2labs.github.io/tags/nexus/">Nexus</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/cyanogen/">cyanogen</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/google/">Google</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/custom/">Custom</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/lg/">LG</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/mobile/">Mobile</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/lolipop/">lolipop</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/root/">Root</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/security/">Security</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/rom/">ROM</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/rooting/">Rooting</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-12-rooting-my-nexus-4-with-android-5-0-1%2f&amp;text=Rooting%20my%20Nexus%204%20with%20Android%205.0.1&amp;via=seguridadxato2" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-12-rooting-my-nexus-4-with-android-5-0-1%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-12-rooting-my-nexus-4-with-android-5-0-1%2f&amp;title=Rooting%20my%20Nexus%204%20with%20Android%205.0.1" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-12-rooting-my-nexus-4-with-android-5-0-1%2f&amp;title=Rooting%20my%20Nexus%204%20with%20Android%205.0.1" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-12-rooting-my-nexus-4-with-android-5-0-1%2f&amp;title=Rooting%20my%20Nexus%204%20with%20Android%205.0.1" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-12-rooting-my-nexus-4-with-android-5-0-1%2f&amp;description=Rooting%20my%20Nexus%204%20with%20Android%205.0.1" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/">Digital Forensics of Android WhatsApp SQLite Database (Part II)</a></li>
+                
+                    <li><a href="/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/">Digital Forensics of Android WhatsApp SQLite Database (Part I)</a></li>
+                
+                    <li><a href="/post/2015-06-20-google-hacking-parte-ii/">Google Hacking Parte II</a></li>
+                
+                    <li><a href="/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/">Curso: SSN-ST2-01 - Security System and Network</a></li>
+                
+                    <li><a href="/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/">Password Alert: Plugin para Google Chrome - Protege tus cuentas de Google</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/" data-toggle="tooltip" data-placement="top" title="GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense">&larr; Artículo anterior</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://st2labs.github.io/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/" data-toggle="tooltip" data-placement="top" title="Password Alert: Plugin para Google Chrome - Protege tus cuentas de Google">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:info@seguridadparatodos.es" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/st2labs" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/seguridadxato2" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/julianjgonzalez" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="www.st2labs.com">Julian J Gonzalez</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://st2labs.github.io">Seguridad para Todos</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.54.0</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://st2labs.github.io/js/main.js"></script>
+<script src="https://st2labs.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://st2labs.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

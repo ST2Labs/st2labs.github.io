@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scanner on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/scanner/</link>
+    <description>Recent content in Scanner on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 05 Nov 2014 20:27:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/scanner/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Análisis de Vulnerabilidades WEB y los falsos positivos </title>
+      <link>https://st2labs.github.io/post/2014-11-05-analisis-de-vulnerabilidades-web-y-los-falsos-positivos/</link>
+      <pubDate>Wed, 05 Nov 2014 20:27:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-11-05-analisis-de-vulnerabilidades-web-y-los-falsos-positivos/</guid>
+      <description>En el Análisis de Vulnerabilidades es muy frecuente que se realicen
+varios test / scanner con diferentes herramientas para llevar a cabo una
+eliminación de falsos positivos (especialmente durante Auditorias de
+Seguridad a aplicación WEB). Una vez tienes el resultado, se verifican
+manualmente los resultados con objeto de ofrecer un informe con el
+mínimo número de falsos positivos posibles.
+En un CSIRT (*&amp;lt;span
+style=&amp;ldquo;background-color: white; color: #252525; font-family: sans-serif; font-size: 14px; line-height: 22.</description>
+    </item>
+    
+  </channel>
+</rss>

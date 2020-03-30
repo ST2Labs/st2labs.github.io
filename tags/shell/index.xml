@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/shell/</link>
+    <description>Recent content in Shell on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 23 Dec 2015 10:50:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Feliz Navidad with Custom Python Reverse Shell</title>
+      <link>https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/</link>
+      <pubDate>Wed, 23 Dec 2015 10:50:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/</guid>
+      <description>Este año es mi quinta (5) Navidad con vosotros, parece que fuera
+ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,
+el camino recorrido hasta ahora ha sido gratificante y emocionante, pero
+quizás lo es aún más el camino que queda por recorrer.
+Como es habitual, la intensidad con la que publico artículos se
+encuentra supeditada a la vida misma (y a los deseos de mi pequeña xD),</description>
+    </item>
+    
+    <item>
+      <title>Python para Hacking (I) - Run a secure Shell command </title>
+      <link>https://st2labs.github.io/post/2015-04-02-python-para-hacking-i-run-a-secure-shell-command/</link>
+      <pubDate>Thu, 02 Apr 2015 13:36:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-02-python-para-hacking-i-run-a-secure-shell-command/</guid>
+      <description>Ahora que estoy de vacaciones (bendita semana santa) he sacado un hueco
+para terminar uno de los muchos artículos que tengo pensado escribir
+sobre el lenguaje de programación python, donde a pesar de ser yo un
+recién llegado al mundo python, ya me siento extremadamente cómodo
+programando en python, hasta tal punto que se ha convertido en mi
+lenguaje favorito.
+En artículos anteriores os hable de como usar python como lenguaje de</description>
+    </item>
+    
+    <item>
+      <title>SSS REVOLUTION [S]HELSHOCK,[S]SLV3 POODLE ATTACK Y [S]ANDWORM</title>
+      <link>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</link>
+      <pubDate>Wed, 15 Oct 2014 19:27:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</guid>
+      <description>Estaba yo desempolvando el teclado cuando en un abrir y cerrar de ojos,
+aparecen las [SSS] como si de la santísima trinidad se tratase,
+primero Shellshock, despues Sandworm (0-day en sistemas Windows )y ahora
+cifrado SSLv3, si juntas las tres vulnerabilidades se da el apocalisis
+de Internet, de hecho casi poco ese título en lugar del actual, pero
+entonces parecería un Blog con tintes religiosos, y no quisiera yo que</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Password on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/password/</link>
+    <description>Recent content in Password on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Fri, 01 May 2015 13:06:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Password Alert: Plugin para Google Chrome - Protege tus cuentas de Google</title>
+      <link>https://st2labs.github.io/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/</link>
+      <pubDate>Fri, 01 May 2015 13:06:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/</guid>
+      <description>Si eres de los que utiliza Google Chrome como navegador por defecto a
+diario en casa y el trabajo, te recomiendo que sigas leyendo.
+**&amp;ndash; Google Chrome Plugins - Password
+Alert**
+Google presenta una extensión para Google Chrome que te ayudará a
+protegerte frente a ataques de phishing que intentan conseguir tu
+contraseña de acceso a las cuentas de Google.
+ *Alerta de protección de contraseña te ayuda a protegerte contra</description>
+    </item>
+    
+  </channel>
+</rss>

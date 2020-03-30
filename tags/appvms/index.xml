@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Appvms on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/appvms/</link>
+    <description>Recent content in Appvms on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Thu, 14 May 2015 18:30:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/appvms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VENOM Vulnerability - All VM are in Risk? (CVE-2015-3456) </title>
+      <link>https://st2labs.github.io/post/2015-05-14-venom-vulnerability-all-vm-are-in-risk-cve-2015-3456/</link>
+      <pubDate>Thu, 14 May 2015 18:30:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-14-venom-vulnerability-all-vm-are-in-risk-cve-2015-3456/</guid>
+      <description>VENOM (CVE-2015-3456)
+is (Virtualized Eniroment Negleted Operations Manipulation), lo que
+viene a decir, que se ha descubierto una vulnerabilidad que permite
+acceder por completo al entorno de ejecución del hipervisor desde una
+máquina virtual cualquiera, lo que significa acceder por completo al
+entorno de ejecución del resto de máquina virtuales que tiene el Host en
+ejecución.
+Xen Security Advisory CVE-2015-3456 / XSA-133 version 2 Privilege escalation via emulated floppy disk drive A continuación un ejemplo gráfico que ilustrará en que consiste la</description>
+    </item>
+    
+  </channel>
+</rss>

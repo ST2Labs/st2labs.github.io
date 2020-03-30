@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lg on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/lg/</link>
+    <description>Recent content in Lg on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Sun, 12 Apr 2015 11:13:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/lg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rooting my Nexus 4 with Android 5.0.1</title>
+      <link>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</link>
+      <pubDate>Sun, 12 Apr 2015 11:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</guid>
+      <description>Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your system [ I supposed you have Windows]
+ 2
+. **Enable
+USB Debbugin Options** ( press 7 times in build info into Settings Menu
+)
+3 . Need have Bootloader unlocked, if you don&amp;rsquo;t, please check out</description>
+    </item>
+    
+  </channel>
+</rss>

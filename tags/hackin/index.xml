@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackin on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/hackin/</link>
+    <description>Recent content in Hackin on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Fri, 23 Jan 2015 11:07:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/hackin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Taller de Iniciación al Hacking Ético</title>
+      <link>https://st2labs.github.io/post/2015-01-23-taller-de-iniciacion-al-hacking-etico/</link>
+      <pubDate>Fri, 23 Jan 2015 11:07:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-01-23-taller-de-iniciacion-al-hacking-etico/</guid>
+      <description>Hola a tod@s
+Hace tiempo que no escribo ningún artículo, esto no es por falta de
+ganas, sino más bien de tiempo (muchas ideas se pasan a diario por mi
+cabeza, y muchas otras historias sobre las que me gustaría escribir)
+pero aquí estoy escribiendo estas lineas sobre mi participación en el
+próximo Taller de Hacking Ético que organización [Asociación Nacional de
+Tasadores y Peritos Informáticos
+Judiciales](http://www.antpji.com/antpji2013/index.php/661-taller-de-iniciacion-al-hacking-etico)
+, junto a UDIMA (Universidad a Distancia de</description>
+    </item>
+    
+  </channel>
+</rss>

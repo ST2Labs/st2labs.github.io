@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jornadas on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/jornadas/</link>
+    <description>Recent content in Jornadas on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Sat, 23 May 2015 18:45:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/jornadas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>II Jornada de Seguridad en las Comunicaciones y la Información</title>
+      <link>https://st2labs.github.io/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/</link>
+      <pubDate>Sat, 23 May 2015 18:45:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/</guid>
+      <description>El próximo 9/Junio estaré impartiendo un Taller práctico sobre
+Metasploit en la Escuela Técnica Superior de Ingeniera de Sevilla, !!
+sólo 100 plazas ¡¡¡ A continuación toda la información que necesitas
+saber, daros prisa, además tendréis un diploma de asistencia.
+Objetivo
+Jornada especialmente dirigido a Ingeniería de Telecomunicaciones e
+Ingeniería Informática, esta jornada pretende dar a conocer a los
+alumnos de últimos cursos el modelo de negocio de la seguridad en las</description>
+    </item>
+    
+  </channel>
+</rss>

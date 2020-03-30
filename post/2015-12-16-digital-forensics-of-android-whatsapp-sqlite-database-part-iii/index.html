@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Digital Forensics of Android WhatsApp SQLite Database (Part III) - Seguridad para Todos</title>
+  <meta name="description" content="En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte
+I](http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html)
+y
+II,
+la capacidad de recuperación de mensajes eliminados es inversamente
+proporcional al periodo de tiempo transcurrido desde que se produjo el
+hecho, así como a la intensidad de uso de la aplicación en dicho
+periodo. Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor
+es la probabilidad de recuperar la información.">
+  <meta name="author" content="Julian J Gonzalez"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Seguridad para Todos",
+    
+    "url": "https://st2labs.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://st2labs.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://st2labs.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/",
+          "name": "Digital forensics of android whats app s q lite database ( part i i i)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Julian J. Gonzalez"
+  },
+  "headline": "Digital Forensics of Android WhatsApp SQLite Database (Part III)",
+  "description" : "En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte
+I](http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html)
+y
+II,
+la capacidad de recuperación de mensajes eliminados es inversamente
+proporcional al periodo de tiempo transcurrido desde que se produjo el
+hecho, así como a la intensidad de uso de la aplicación en dicho
+periodo. Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor
+es la probabilidad de recuperar la información.",
+  "inLanguage" : "es",
+  "wordCount": 1146,
+  "datePublished" : "2015-12-16T08:00:00",
+  "dateModified" : "2015-12-16T08:00:00",
+  "image" : "https://st2labs.github.io/img/st2400x400.jpg",
+  "keywords" : [ "database, dftime, DFIR, sqlite, Forensics, Whatsapp, dfsqlite3, tool, dfslite" ],
+  "mainEntityOfPage" : "https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://st2labs.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://st2labs.github.io/img/st2400x400.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Digital Forensics of Android WhatsApp SQLite Database (Part III)" />
+<meta property="og:description" content="En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte
+I](http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html)
+y
+II,
+la capacidad de recuperación de mensajes eliminados es inversamente
+proporcional al periodo de tiempo transcurrido desde que se produjo el
+hecho, así como a la intensidad de uso de la aplicación en dicho
+periodo. Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor
+es la probabilidad de recuperar la información.">
+<meta property="og:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+<meta property="og:url" content="https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Seguridad para Todos" />
+
+  <meta name="twitter:title" content="Digital Forensics of Android WhatsApp SQLite Database (Part III)" />
+  <meta name="twitter:description" content="En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte …">
+  <meta name="twitter:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seguridadxato2" />
+  <meta name="twitter:creator" content="@seguridadxato2" />
+  <link href='https://st2labs.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://st2labs.github.io/index.xml" type="application/rss+xml" title="Seguridad para Todos"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://st2labs.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://st2labs.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://st2labs.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26021994-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://st2labs.github.io">Seguridad para Todos</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Seguridad para Todos" href="https://st2labs.github.io">
+            <img class="avatar-img" src="https://st2labs.github.io/img/st2400x400.jpg" alt="Seguridad para Todos" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Digital Forensics of Android WhatsApp SQLite Database (Part III)</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 16 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1146&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-Whatsapp_p3_st2labs.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-Whatsapp_p3_st2labs.png" alt="" /></a></p>
+
+<p>En este artículo abordaré la recuperación de mensajes borrado en la</p>
+
+<p>aplicación WhatsApp, como ya comente en la [parte</p>
+
+<p>I](<a href="http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html">http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html</a>)</p>
+
+<p>y</p>
+
+<p><a href="http://www.seguridadparatodos.es/2015/12/digital-forensics-of-android-whatsapp-p2.html">II</a>,</p>
+
+<p>la capacidad de recuperación de mensajes eliminados es inversamente</p>
+
+<p>proporcional al periodo de tiempo transcurrido desde que se produjo el</p>
+
+<p>hecho, así como a la intensidad de uso de la aplicación en dicho</p>
+
+<p>periodo. </p>
+
+<p>Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor</p>
+
+<p>es la probabilidad de recuperar la información.</p>
+
+<p><span style="font-size: large;">**Recuperando mensajes eliminados de</p>
+
+<p>WhatsApp - Recovery Data**</span></p>
+
+<p>Si recordamos en la [segunda</p>
+
+<p>parte](<a href="http://www.seguridadparatodos.es/2015/12/digital-forensics-of-android-whatsapp-p2.html">http://www.seguridadparatodos.es/2015/12/digital-forensics-of-android-whatsapp-p2.html</a>),</p>
+
+<p>el timestamp de un mensaje consta de 6 bytes y se encuentra justo a</p>
+
+<p>continuación de los datos, tal y como se puede ver en la siguiente</p>
+
+<p>imagen:</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-Cell_data_st2labs.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-Cell_data_st2labs.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td>ST2Labs 13 - Cell Data to Offset 11358</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>Pero antes de ponernos manos a la obra y decodificar el timestamp, se</p>
+
+<p>puede analizar la base de datos en busca de información eliminada, para</p>
+
+<p>ello, se deben de examinar el espacio sin utilizar (unallocated), los</p>
+
+<p>freeblock o incluso los freelist.</p>
+
+<p>En las base de datos SQLite, existe la posibilidad de indicar que un</p>
+
+<p>registro (cell record) ha sido eliminado marcando el mismo como</p>
+
+<p>&ldquo;freeblock&rdquo; dentro de una página, además si se elimina una página</p>
+
+<p>entera, se puede marcar como Freelist. </p>
+
+<p>La información residual que queda en una base de datos cuando no se</p>
+
+<p>sigue el estándar, es aquella que es eliminada desde la aplicación</p>
+
+<p>(chat) y simplemente se elimina su &ldquo;indexación&rdquo; en la base de datos, es</p>
+
+<p>decir, en aquel espacio que no esta asignado a ninguna función  es</p>
+
+<p>denominado unallocated, y puede contener información que previamente ha</p>
+
+<p>sido eliminada, y que por tanto, no se encuentra indexada en la base de</p>
+
+<p>datos.</p>
+
+<p>Por tanto resumiendo, la información eliminada puede estar ubicada en:</p>
+
+<p> - unallocated space</p>
+
+<p> - freeblock</p>
+
+<p> - freelist</p>
+
+<p>Además, si la base de datos es configurada con &ldquo;rollback&rdquo;, puede existir</p>
+
+<p>archivos WAL (Write-Ahead Log) o Journal, que permite guardar una copia</p>
+
+<p>de seguridad de una página mientras esta se esta modificando y no ha</p>
+
+<p>recibido un &ldquo;commit&rdquo;. </p>
+
+<p><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-sqlite_page_st2labs.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-sqlite_page_st2labs.png" alt="" /></a></p>
+
+<p>Si existe el fichero db-wal o db-journal, es muy recomendable realizar</p>
+
+<p>un análisis forense de dichos archivos, en busca de información</p>
+
+<p>relevante. Si existen esto archivos, no se recomienda abrir la base de</p>
+
+<p>datos con un visor de SQLite, ya que puede ejecutar un &ldquo;commit&rdquo;</p>
+
+<p>pendiente y borrar por completo toda la información que pudiera</p>
+
+<p>contener.</p>
+
+<p>En nuestro caso, no disponemos de archivo db-wal, por lo que procedemos</p>
+
+<p>a analizar la información contenida en el archivo y que no esta</p>
+
+<p>consideraba como &ldquo;válida&rdquo;, es decir, analizaremos todos los freeblock,</p>
+
+<p>unallocated y freelist que existan.</p>
+
+<p>Realizar esta tarea de forma manual es bastante tediosa, ya que para</p>
+
+<p>cada página se debe de extraer la información que existe entre la ultima</p>
+
+<p>&ldquo;celda - registro&rdquo; y el final de Cell Pointer Array (como recordáis del</p>
+
+<p>artículo anterior&rdquo;.</p>
+
+<p>Pero además, puede exisitr espacio &ldquo;unallocated&rdquo; entre celdas, y /o</p>
+
+<p>freeblock (son aquellas celdas que han sido marcadas como disponibles)</p>
+
+<p>al realizar la acción de eliminar mensajes.</p>
+
+<p><strong><span class="underline">Vamos con un ejemplo:</span></strong></p>
+
+<p>Abrimos la base de datos con un editor hexadecimal y analizamos el</p>
+
+<p>contenido de toda la página 3, ya que consideramos que es la más</p>
+
+<p>indicada al ser la que contiene la información de &ldquo;mensajes&rdquo;. Si se ha</p>
+
+<p>eliminado algún mensaje debe de ser de esta página.</p>
+
+<p>Datos de interés para la página 3, según la información analizada en el</p>
+
+<p>articulo 2:</p>
+
+<p> - Offset page 3: 8192</p>
+
+<p> - Ultima celda (registro) Offset: 11358</p>
+
+<p> - Offset cell pointer: 8200</p>
+
+<p> - Size Cell Pointer: 8 bytes</p>
+
+<p>Por tanto, el espacio &ldquo;unallocated&rdquo; entre la utlima celda (registro) y</p>
+
+<p>el final de Cell Pointer Array se puede calcular tal que así:</p>
+
+<p>Ini unallocated Offset = 8208</p>
+
+<p>Size = 11358 - 8208 =  3150 bytes</p>
+
+<p>Con ayuda de un editor hexadecimal, se obtiene:</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-unallocated_space_p3_st2labs.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-unallocated_space_p3_st2labs.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">ST2Labs 14 - Unallocated database pace for page 3</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>Se puede observar que existen varios mensajes como información residual</p>
+
+<p>en la página 3 de la base de datos, el **key_id (identificador único de</p>
+
+<p>cada mensaje) esta compuesto por un &ldquo;hash&rdquo; y un número de secuencia,**</p>
+
+<p>además con el timestamp de los mensajes se puede realizar el timeline</p>
+
+<p>correspondiente.</p>
+
+<p>Por ejemplo, se procede a analizar la información para el mensaje:</p>
+
+<table>
+
+<colgroup>
+
+<col style="width: 100%" />
+
+</colgroup>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-whatsapp_msg_st2labs_timestamp.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-whatsapp_msg_st2labs_timestamp.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">ST2Labs 15 - Recovery Delete Message - Whatsapp<br />
+
+<br />
+
+
+
+<div style="text-align: justify;">
+
+<span style="font-size: small;">No existe una forma normalizada de finalizar un mensaje, para calcular el tamaño exacto del mensaje, se debe de decodificar el cell header y el payloda header, sin embargo, para los datos que han sido eliminado (no están indexados) no se conoce el offset de los registro eliminados, por lo que no se puede a priori determinar el inicio de la celda, salvo mediante técnica de prueba y error. </span>
+
+</div>
+
+<div style="text-align: justify;">
+
+<span style="font-size: small;"><br />
+
+</span>
+
+</div>
+
+<div style="text-align: justify;">
+
+<span style="font-size: small;"><br />
+
+</span>
+
+</div>
+
+<div style="text-align: justify;">
+
+<span style="font-size: small;">Por ello, obtener el timetamp, es coger los 6 bytes seguido al final del mensaje, para el caso de ejemplo, acaba sin ".", en otros casos puede que haya que probar más de una vez, por si el carácter "." forma parte del mensaje de texto o no.</span>
+
+</div></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>En nuestro caso de ejemplo:</p>
+
+<p><strong>Timestamp: 01513407d3f8</strong></p>
+
+<p>Utilizando <strong>DFTime</strong>, la herramienta para convertir el timestamp a</p>
+
+<p>Fecha y Hora, se obtiene:</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-DFTime_st2labs.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-DFTime_st2labs.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">ST2Labs 16 - DFTime - Timestamp converter tools</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>Sin embargo, para asegurarse que no existe ningún otro mensaje eliminado</p>
+
+<p>disperso por la base de datos, se debe de analizar los freeblock dentro</p>
+
+<p>de la página 3.</p>
+
+<p>La información, si existen freeblock o no, se encuentra dentro de la</p>
+
+<p>cabecera de cada una de las páginas, con ayuda de la herramienta</p>
+
+<p>DFSLite, se puede consultar todas y cada una de las cabeceras de las</p>
+
+<p>páginas de la base de datos, con el comando -B.</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-Header_freeblock_page_st2labs.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-Header_freeblock_page_st2labs.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">ST2Labs 17 - Page header - freeblock </td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>Se analiza la información, y para la página 3 se detecta que existen 2</p>
+
+<p>freeblock, donde el offset del primer freeblock es 3514 relativo a al</p>
+
+<p>offset de la página. </p>
+
+<p>Se utiliza DFSLite, con la opción -u para obtener la información</p>
+
+<p>contenida dentro de los freeblock, y unallocated, tal que:</p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td style="text-align: center;"><a href="../images/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-All_recovery_msg_st2labs.png"><img src="../images/thumbnails/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii-All_recovery_msg_st2labs.png" /></a></td>
+
+</tr>
+
+<tr class="even">
+
+<td style="text-align: center;">ST2Labs 18 - All messages recovery</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>Se ha utilizado <strong>strings</strong> para visualizar mejor los mensajes, pues la</p>
+
+<p>herramienta muestra la información en bruto (raw data). No obstante,</p>
+
+<p>para determinar el timestamp de los mensajes y montar un &ldquo;timeline&rdquo;, se</p>
+
+<p>debe de abrir el archivo en hexadecimal y analizar de forma manual, tal</p>
+
+<p>y como se ha visto en este artículo.</p>
+
+<p>Para descubrir todos los mensajes se deberá de analizar todas las</p>
+
+<p>páginas de la base de datos, por tanto cuanto mayor sea la base de</p>
+
+<p>datos, mas elaborado y mayor será el tiempo que se tardará en obtener</p>
+
+<p>los resultados.</p>
+
+<p>Espero que haya sido de utilidad, a continuación os dejo el enlace al</p>
+
+<p>repositorio donde voy subiendo las herramientas.</p>
+
+<p><strong><span style="font-size: large;">DFTime Tools</span></strong></p>
+
+<p>Se puede descargar la herramienta desde el repositorio oficial de</p>
+
+<p>ST2Labs (<a href="https://github.com/ST2Labs/DFIR/tree/master/SQLite">https://github.com/ST2Labs/DFIR/tree/master/SQLite</a>)</p>
+
+<p>#ST2Labs</p>
+
+<p>#GEOSystemSoftware</p>
+
+<p>www.st2labs.com | www.seguridadparatodos.es</p>
+
+<p>PD: El análisis de las freelist page os lo dejo como &ldquo;trabajo&rdquo; para</p>
+
+<p>casa. :) Al igual que realizar un análisis manual de los freeblock.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://st2labs.github.io/tags/database/">database</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/dftime/">dftime</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/dfir/">DFIR</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/sqlite/">sqlite</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/forensics/">Forensics</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/whatsapp/">Whatsapp</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/dfsqlite3/">dfsqlite3</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/tool/">tool</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/dfslite/">dfslite</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii%2f&amp;text=Digital%20Forensics%20of%20Android%20WhatsApp%20SQLite%20Database%20%28Part%20III%29&amp;via=seguridadxato2" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii%2f&amp;title=Digital%20Forensics%20of%20Android%20WhatsApp%20SQLite%20Database%20%28Part%20III%29" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii%2f&amp;title=Digital%20Forensics%20of%20Android%20WhatsApp%20SQLite%20Database%20%28Part%20III%29" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii%2f&amp;title=Digital%20Forensics%20of%20Android%20WhatsApp%20SQLite%20Database%20%28Part%20III%29" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii%2f&amp;description=Digital%20Forensics%20of%20Android%20WhatsApp%20SQLite%20Database%20%28Part%20III%29" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/">Digital Forensics of Android WhatsApp SQLite Database (Part II)</a></li>
+                
+                    <li><a href="/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/">Digital Forensics of Android WhatsApp SQLite Database (Part I)</a></li>
+                
+                    <li><a href="/post/2015-10-19-windows-forensics-tips-usb-write-protected/">Windows Forensics Tips - USB Write Protected</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/" data-toggle="tooltip" data-placement="top" title="Digital Forensics of Android WhatsApp SQLite Database (Part II)">&larr; Artículo anterior</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/" data-toggle="tooltip" data-placement="top" title="Feliz Navidad with Custom Python Reverse Shell">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:info@seguridadparatodos.es" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/st2labs" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/seguridadxato2" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/julianjgonzalez" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="www.st2labs.com">Julian J Gonzalez</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://st2labs.github.io">Seguridad para Todos</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.54.0</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://st2labs.github.io/js/main.js"></script>
+<script src="https://st2labs.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://st2labs.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

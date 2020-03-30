@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Svtcloud on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/svtcloud/</link>
+    <description>Recent content in Svtcloud on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Fri, 01 Apr 2016 16:36:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/svtcloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[SIPI] Simple IP Information Tool is out</title>
+      <link>https://st2labs.github.io/post/2016-04-01-sipi-simple-ip-information-tool-is-out/</link>
+      <pubDate>Fri, 01 Apr 2016 16:36:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2016-04-01-sipi-simple-ip-information-tool-is-out/</guid>
+      <description>Cuando se reciben miles de ataques desde Internet, es necesario disponer
+de información que permita tomar decisiones de una forma ágil y rápida.
+En un CERT/SOC, es decir en un centro de operaciones de ciberseguridad,
+es primordial disponer de información sobre una posible amenaza para
+ejecutar acciones y/o medidas de prevención, protección y defensa.
+Introducción
+Por ejemplo, se detecta un tcp_scan en el IPS / Cortafuegos:
+    FortiAnalyzer - Event Manager - IPS    A priori no se sabe si es lícito o no, para resolver el misterio se</description>
+    </item>
+    
+  </channel>
+</rss>

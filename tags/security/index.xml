@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/security/</link>
+    <description>Recent content in Security on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 13 May 2015 17:37:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Curso: SSN-ST2-01 - Security System and Network</title>
+      <link>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</link>
+      <pubDate>Wed, 13 May 2015 17:37:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</guid>
+      <description>ACTUALIZACIÓN (26/06/2015):
+El curso ha sido cancelado por &amp;ldquo;agotamiento&amp;rdquo; de convocatoria. Hasta
+nuevo aviso, **no habrá más cursos en
+colaboración** ST2Labs y Canal Seguro. *&amp;lt;span
+style=&amp;ldquo;color: #990000;&amp;ldquo;&amp;gt;Aviso: **no soy tutor de ningún otro curso en
+Canal Seguro**, a menos que yo mismo lo anuncie de forma oficial a
+través de mis cuentas de redes sociales y este Blog_.*
+&amp;gt;&amp;gt;&amp;gt; /*
+**
+*[..] lanza el curso de &amp;ldquo;Security
+Systems and Networks” con el firme objetivo de proporcionar al alumno</description>
+    </item>
+    
+    <item>
+      <title>Rooting my Nexus 4 with Android 5.0.1</title>
+      <link>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</link>
+      <pubDate>Sun, 12 Apr 2015 11:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</guid>
+      <description>Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your system [ I supposed you have Windows]
+ 2
+. **Enable
+USB Debbugin Options** ( press 7 times in build info into Settings Menu
+)
+3 . Need have Bootloader unlocked, if you don&amp;rsquo;t, please check out</description>
+    </item>
+    
+    <item>
+      <title>GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense</title>
+      <link>https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/</link>
+      <pubDate>Fri, 10 Apr 2015 15:10:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/</guid>
+      <description>Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
+Redes Móviles, en dicha charla os comentaba las debilidades /
+vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado en diciembre de 2014, durante el congreso del [Chaos
+Computer
+Club](http://events.ccc.de/congress/2014/wiki/Static:Main_Page), los
+investigadores de Security ReseachLabs **han
+publicado una vez más las debilidades existentes** en las redes móviles
+actuales, y además, han creado un par de proyectos software libre, el</description>
+    </item>
+    
+    <item>
+      <title>SSS REVOLUTION [S]HELSHOCK,[S]SLV3 POODLE ATTACK Y [S]ANDWORM</title>
+      <link>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</link>
+      <pubDate>Wed, 15 Oct 2014 19:27:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</guid>
+      <description>Estaba yo desempolvando el teclado cuando en un abrir y cerrar de ojos,
+aparecen las [SSS] como si de la santísima trinidad se tratase,
+primero Shellshock, despues Sandworm (0-day en sistemas Windows )y ahora
+cifrado SSLv3, si juntas las tres vulnerabilidades se da el apocalisis
+de Internet, de hecho casi poco ese título en lugar del actual, pero
+entonces parecería un Blog con tintes religiosos, y no quisiera yo que</description>
+    </item>
+    
+  </channel>
+</rss>

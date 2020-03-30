@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dfsqlite2 on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/dfsqlite2/</link>
+    <description>Recent content in Dfsqlite2 on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 02 Dec 2015 18:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/dfsqlite2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part II)</title>
+      <link>https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/</link>
+      <pubDate>Wed, 02 Dec 2015 18:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/</guid>
+      <description>En esta segunda parte, se procederá a recuperar **un mensaje que ha sido
+eliminado** en la base de datos SQLite de la aplicación WhatsApp y se
+analizará la información obtenida para determinar cuando se envío el
+mensaje (timestamp) recuperado.
+Estructura de SQLite (II)
+Una vez que conocemos el esquema de la base de datos, y como se organiza
+la información útil (payload data) dentro de las celdas de cada una de</description>
+    </item>
+    
+  </channel>
+</rss>

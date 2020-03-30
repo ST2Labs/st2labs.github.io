@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dfsqlite3 on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/dfsqlite3/</link>
+    <description>Recent content in Dfsqlite3 on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 16 Dec 2015 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/dfsqlite3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part III)</title>
+      <link>https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/</link>
+      <pubDate>Wed, 16 Dec 2015 08:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/</guid>
+      <description>En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte
+I](http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html)
+y
+II,
+la capacidad de recuperación de mensajes eliminados es inversamente
+proporcional al periodo de tiempo transcurrido desde que se produjo el
+hecho, así como a la intensidad de uso de la aplicación en dicho
+periodo. Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor
+es la probabilidad de recuperar la información.</description>
+    </item>
+    
+  </channel>
+</rss>

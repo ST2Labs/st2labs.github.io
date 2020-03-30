@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Formación on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/formaci%C3%B3n/</link>
+    <description>Recent content in Formación on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Sat, 20 Jun 2015 19:13:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/formaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Hacking Parte II</title>
+      <link>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</link>
+      <pubDate>Sat, 20 Jun 2015 19:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</guid>
+      <description>****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma, sans-serif;&amp;ldquo;&amp;gt;, donde habíamos introducido
+los operadores que nos permiten exprimir al máximo este famoso buscador.
+Hoy veremos ejemplos sencillos de como podemos utilizar estos
+operadores.
+****
+&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&amp;ldquo;&amp;gt;Listado
+de directorios
+Una de las acciones
+habituales a la hora de mejorar la seguridad de un sitio web, es</description>
+    </item>
+    
+    <item>
+      <title>Curso: SSN-ST2-01 - Security System and Network</title>
+      <link>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</link>
+      <pubDate>Wed, 13 May 2015 17:37:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</guid>
+      <description>ACTUALIZACIÓN (26/06/2015):
+El curso ha sido cancelado por &amp;ldquo;agotamiento&amp;rdquo; de convocatoria. Hasta
+nuevo aviso, **no habrá más cursos en
+colaboración** ST2Labs y Canal Seguro. *&amp;lt;span
+style=&amp;ldquo;color: #990000;&amp;ldquo;&amp;gt;Aviso: **no soy tutor de ningún otro curso en
+Canal Seguro**, a menos que yo mismo lo anuncie de forma oficial a
+través de mis cuentas de redes sociales y este Blog_.*
+&amp;gt;&amp;gt;&amp;gt; /*
+**
+*[..] lanza el curso de &amp;ldquo;Security
+Systems and Networks” con el firme objetivo de proporcionar al alumno</description>
+    </item>
+    
+  </channel>
+</rss>

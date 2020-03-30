@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheat Sheet on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/cheat-sheet/</link>
+    <description>Recent content in Cheat Sheet on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Tue, 01 Oct 2019 09:18:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/cheat-sheet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Great SNORT - Cheat Sheet</title>
+      <link>https://st2labs.github.io/post/2019-10-01-great-snort-cheat-sheet/</link>
+      <pubDate>Tue, 01 Oct 2019 09:18:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2019-10-01-great-snort-cheat-sheet/</guid>
+      <description>Cheat Sheet - SNORT    Hace tiempo escribí un articulo sobre la distribución Security Onion,
+que podéis leer
+aquí.
+El proyecto ha seguido evolucionando, son numerosos los cambios
+introducidos, para aquellos interesados os dejo el enlace:
+- Información: https://securityonion.net
+-
+Download: https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md
+Pero el motivo de escribir esta &amp;ldquo;mini&amp;rdquo; entrada, es compartir con todos
+una hoja resumen de comando sobre SNORT, Please, If you want to know how works SNORT go</description>
+    </item>
+    
+  </channel>
+</rss>

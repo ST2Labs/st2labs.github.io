@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matriculación on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/matriculaci%C3%B3n/</link>
+    <description>Recent content in Matriculación on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Fri, 03 Jul 2015 20:25:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/matriculaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación</title>
+      <link>https://st2labs.github.io/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/</link>
+      <pubDate>Fri, 03 Jul 2015 20:25:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/</guid>
+      <description>! Cómo pasa el tiempo ¡ Ya ésta aquí la tercera edición del Máster
+Seguridad de la Comunicaciones y la Información (#MSTIC16) donde
+impartiré la clase práctica de Técnicas de
+Hacking y Pentesting, cómo **novedad este año
+las 5 clases que impartiré serán totalmente en el laboratorio**,
+con ejemplo y casos prácticos donde los alumnos se enfrentaran a casos
+reales, aprenderán a manejar las herramientas, interpretar los
+resultados y resolver problemas en entorno reales.</description>
+    </item>
+    
+  </channel>
+</rss>

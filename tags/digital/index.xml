@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/digital/</link>
+    <description>Recent content in Digital on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Thu, 26 Nov 2015 18:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/digital/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part I)</title>
+      <link>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</link>
+      <pubDate>Thu, 26 Nov 2015 18:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</guid>
+      <description>Hace poco me he tenido que enfrentar al análisis forense de la
+aplicación Whatsapp en Android, y la sorpresa es la limitada información
+que existe al respecto. Whatsapp no tiene una API pública, y no sólo
+eso, sino que persigue claramente a quién tras aplicar ingeniería
+inversa publica información al respecto, me estoy refiriendo sobretodo a
+la información del protocolo interno de la aplicación.
+Antecedentes
+Independientemente de la información existente, mi reto no era descifrar</description>
+    </item>
+    
+    <item>
+      <title>Windows Forensics Tips - USB Write Protected</title>
+      <link>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</link>
+      <pubDate>Mon, 19 Oct 2015 10:34:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</guid>
+      <description>Hi every one!
+This post I have decided write in english why? Answer is why not? In
+Digital Forensics it&amp;rsquo;s so important to mantain integrity of evidence, is
+for this reason what you need read data without any modification.
+Sometime you get the &amp;ldquo;evidence&amp;rdquo; and write into a USB stick, then if you
+have to read data into windows device, you must enable write
+protetection for USB device to avoid any modification of them.</description>
+    </item>
+    
+  </channel>
+</rss>

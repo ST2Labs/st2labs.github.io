@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Usb on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/usb/</link>
+    <description>Recent content in Usb on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Mon, 19 Oct 2015 10:34:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/usb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows Forensics Tips - USB Write Protected</title>
+      <link>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</link>
+      <pubDate>Mon, 19 Oct 2015 10:34:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</guid>
+      <description>Hi every one!
+This post I have decided write in english why? Answer is why not? In
+Digital Forensics it&amp;rsquo;s so important to mantain integrity of evidence, is
+for this reason what you need read data without any modification.
+Sometime you get the &amp;ldquo;evidence&amp;rdquo; and write into a USB stick, then if you
+have to read data into windows device, you must enable write
+protetection for USB device to avoid any modification of them.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seguridad De La Información on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/seguridad-de-la-informaci%C3%B3n/</link>
+    <description>Recent content in Seguridad De La Información on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Thu, 26 Nov 2015 18:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/seguridad-de-la-informaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part I)</title>
+      <link>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</link>
+      <pubDate>Thu, 26 Nov 2015 18:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</guid>
+      <description>Hace poco me he tenido que enfrentar al análisis forense de la
+aplicación Whatsapp en Android, y la sorpresa es la limitada información
+que existe al respecto. Whatsapp no tiene una API pública, y no sólo
+eso, sino que persigue claramente a quién tras aplicar ingeniería
+inversa publica información al respecto, me estoy refiriendo sobretodo a
+la información del protocolo interno de la aplicación.
+Antecedentes
+Independientemente de la información existente, mi reto no era descifrar</description>
+    </item>
+    
+  </channel>
+</rss>

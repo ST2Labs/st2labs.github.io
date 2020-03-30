@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Google Hacking Parte II - Seguridad para Todos</title>
+  <meta name="description" content="****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&lt;span
+style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;, donde habíamos introducido
+los operadores que nos permiten exprimir al máximo este famoso buscador.
+Hoy veremos ejemplos sencillos de como podemos utilizar estos
+operadores.
+****
+&lt;span
+style=&ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&ldquo;&gt;Listado
+de directorios
+Una de las acciones
+habituales a la hora de mejorar la seguridad de un sitio web, es">
+  <meta name="author" content="Julian J Gonzalez"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Seguridad para Todos",
+    
+    "url": "https://st2labs.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://st2labs.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://st2labs.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/",
+          "name": "Google hacking parte i i"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "José Manuel Aparicio"
+  },
+  "headline": "Google Hacking Parte II",
+  "description" : "****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma, sans-serif;&amp;ldquo;&amp;gt;, donde habíamos introducido
+los operadores que nos permiten exprimir al máximo este famoso buscador.
+Hoy veremos ejemplos sencillos de como podemos utilizar estos
+operadores.
+****
+&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&amp;ldquo;&amp;gt;Listado
+de directorios
+Una de las acciones
+habituales a la hora de mejorar la seguridad de un sitio web, es",
+  "inLanguage" : "es",
+  "wordCount": 1093,
+  "datePublished" : "2015-06-20T19:13:00",
+  "dateModified" : "2015-06-20T19:13:00",
+  "image" : "https://st2labs.github.io/img/st2400x400.jpg",
+  "keywords" : [ "GooHS, Hacking, Fase, Formación, Pentesting, Google, Reconocimiento, OSINT, Web, Parte 2" ],
+  "mainEntityOfPage" : "https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://st2labs.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://st2labs.github.io/img/st2400x400.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Google Hacking Parte II" />
+<meta property="og:description" content="****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&lt;span
+style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;, donde habíamos introducido
+los operadores que nos permiten exprimir al máximo este famoso buscador.
+Hoy veremos ejemplos sencillos de como podemos utilizar estos
+operadores.
+****
+&lt;span
+style=&ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&ldquo;&gt;Listado
+de directorios
+Una de las acciones
+habituales a la hora de mejorar la seguridad de un sitio web, es">
+<meta property="og:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+<meta property="og:url" content="https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Seguridad para Todos" />
+
+  <meta name="twitter:title" content="Google Hacking Parte II" />
+  <meta name="twitter:description" content="****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&lt;span
+style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;, …">
+  <meta name="twitter:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seguridadxato2" />
+  <meta name="twitter:creator" content="@seguridadxato2" />
+  <link href='https://st2labs.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://st2labs.github.io/index.xml" type="application/rss+xml" title="Seguridad para Todos"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://st2labs.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://st2labs.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://st2labs.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26021994-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://st2labs.github.io">Seguridad para Todos</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Seguridad para Todos" href="https://st2labs.github.io">
+            <img class="avatar-img" src="https://st2labs.github.io/img/st2400x400.jpg" alt="Seguridad para Todos" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Google Hacking Parte II</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 20 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1093&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;José Manuel Aparicio
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="../images/2015-06-20-google-hacking-parte-ii-ST2_Google_Hacking_P2.png"><img src="../images/thumbnails/2015-06-20-google-hacking-parte-ii-ST2_Google_Hacking_P2.png" alt="" /></a></p>
+
+<p>**<span style="font-size: medium;"></p>
+
+<p></span>**</p>
+
+<p><strong><span style="font-size: medium;">GOOGLE HACKING: PARTE II</span></strong></p>
+
+<p>**<span style="font-size: medium;"></p>
+
+<p></span>**</p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Venimos de </span>[Google</p>
+
+<p>Hacking</p>
+
+<p>I](<a href="http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html">http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html</a>)&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;, donde habíamos introducido</p>
+
+<p>los operadores que nos permiten exprimir al máximo este famoso buscador.</p>
+
+<p>Hoy veremos ejemplos sencillos de como podemos utilizar estos</p>
+
+<p>operadores.</span></p>
+
+<p>**<span style="font-size: medium;"></p>
+
+<p></span>**</p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&ldquo;&gt;Listado</p>
+
+<p>de directorios</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Una de las acciones</p>
+
+<p>habituales a la hora de mejorar la seguridad de un sitio web, es</p>
+
+<p>desactivar el listado de directorios, es decir, evitar que el servidor</p>
+
+<p>muestre la lista de contenidos de los directorios públicos. Aunque es</p>
+
+<p>habitual que esta opción este deshabilitada, existen muchos servidores</p>
+
+<p>que la traen activa por defecto, por lo que si no es desactivada nos</p>
+
+<p>ofrecería una oportunidad única para recopilar información de</p>
+
+<p>valor.</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Localizar listados de</p>
+
+<p>directorios mediante búsquedas de Google es sencillo. Aprovecharemos la</p>
+
+<p>circunstancia de que la gran mayoría de listados de directorios</p>
+
+<p>comienzan con la frase “Index of”, frase que también se mostrará en el</p>
+
+<p>titulo de la pagina. Una forma rápida para encontrar este tipo de</p>
+
+<p>paginas vendrá dada por la búsqueda; </span>&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;<strong>intitle:index.of</strong></span>&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;, que buscara aquella paginas</p>
+
+<p>cuyo titulo sea “Index of”. Desafortunadamente, esta búsqueda devolverá</p>
+
+<p>multitud de falsos positivos, por lo que necesitaremos afinar un poco</p>
+
+<p>mas la búsqueda. Existen varias palabras claves que a menudo podemos</p>
+
+<p>encontrar en los listados de directorios, como son “parent directory”,</p>
+
+<p>“name” y “size”. Combinando estas palabras claves con la búsqueda</p>
+
+<p>anterior reduciremos drásticamente el numero de falsos positivos.</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of</p>
+
+<p>“parent directory” ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of name</p>
+
+<p>size ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">**Buscando directorios y</p>
+
+<p>archivos** </span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Ya hemos visto como</p>
+
+<p>localizar un listado de directorios, pero aun podemos afinar mas la</p>
+
+<p>búsqueda. Una opción interesante seria buscar un directorio donde</p>
+
+<p>pudiéramos encontrar información útil. Por ejemplo, para localizar un</p>
+
+<p>directorio de nombre “admin” sin tener que navegar por el listado,</p>
+
+<p>añadiríamos a la búsqueda el nombre del directorio de la siguiente</p>
+
+<p>forma:</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of.admin</p>
+
+<p>]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of</p>
+
+<p>inurl:admin ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Pero el listado de</p>
+
+<p>directorios ademas de listar el nombre de los directorios, como su</p>
+
+<p>propio nombre indicia, también lista ficheros. Por tanto, es posible</p>
+
+<p>buscar mediante Google ficheros específicos sin necesidad de navegar por</p>
+
+<p>cada uno de los directorios. Por ejemplo, si pretendemos buscar ficheros</p>
+
+<p>de registro usaríamos la búsqueda:</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of</p>
+
+<p>acces.log ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">**Versión del</p>
+
+<p>servidor**</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Una pieza de información</p>
+
+<p>valiosa que nos ofrecen algunos listados de directorios es el nombre y</p>
+
+<p>numero de la versión software del servidor. Suele aparecer en la parte</p>
+
+<p>baja del listado del directorio, tal como se muestra en la siguiente</p>
+
+<p>imagen.</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Para localizar este tipo</p>
+
+<p>de información usaremos la palabra clave “server at”, que aparece junto</p>
+
+<p>a la versión y nombre del software del servidor web. Podremos también,</p>
+
+<p>buscar un tipo de servidor en concreto, como por ejemplo Apache o IIS, e</p>
+
+<p>incluso una versión determinada, para lo que cambiaríamos el asterisco</p>
+
+<p>por la versión concreta.</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of</p>
+
+<p>“server at” ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of</p>
+
+<p>“Apache/* server at” ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:index.of</p>
+
+<p>“Microsoft-IIS/* server at” ]</span></p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&ldquo;&gt;Páginas</p>
+
+<p>de acceso</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Cuando hablamos de</p>
+
+<p>páginas de acceso, hacemos referencia a aquellas paginas web que</p>
+
+<p>permiten el acceso a una zona restringida mediante unos determinados</p>
+
+<p>credenciales (habitualmente usuario y contraseña). Encontrar este tipo</p>
+
+<p>de página puede sernos útil, ya que podremos obtener información del</p>
+
+<p>software instalado, información que podremos usar posteriormente para</p>
+
+<p>buscar vulnerabilidades y exploits. Así mismo, podremos realizar el</p>
+
+<p>proceso inverso, es decir, a partir de un exploit, usar el buscador de</p>
+
+<p>Google para obtener posibles objetivos. Una ultima opción, seria</p>
+
+<p>realizar ataques de diccionario o fuerza bruta para intentar obtener</p>
+
+<p>acceso al área restringida.</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Existen varias búsquedas</p>
+
+<p>que nos permiten encontrar paginas de acceso de forma general, es decir,</p>
+
+<p>buscaremos paginas de acceso sin tener en cuenta al servicio que podamos</p>
+
+<p>acceder si finalmente comprometemos el sistema. Por ejemplo, podemos</p>
+
+<p>buscar, mediante la URL, formularios web basados en ASP.NET que nos</p>
+
+<dl>
+<dt>permitirán acceder a un área restringida (login.aspx) o formularios</dt>
+</dl>
+
+<p>:</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[</p>
+
+<p>inurl:”/secure/login.aspx” ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Otra opción, es buscar</p>
+
+<p>texto en la web que anuncie que nos encontramos ante un portal de</p>
+
+<p>acceso, por ejemplo, texto que nos pida que introduzcamos los</p>
+
+<p>credenciales necesarios:</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ intitle:Please Login</p>
+
+<p>&ldquo;You have requested access” ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Hemos visto como buscar</p>
+
+<p>páginas de acceso de forma general, pero podemos centrarnos en páginas</p>
+
+<p>de un software o hardware en concreto. Por ejemplo, seria interesante</p>
+
+<p>encontrar una pagina de acceso a una </span>&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;**VPN SSL</p>
+
+<p>Clientless**</span><span style="font-family: Tahoma, sans-serif;"> de</p>
+
+<p>Cisco ASA, software al que le fue descubierta una vulnerabilidad y que</p>
+
+<p>podríamos intentar</p>
+
+<p>explotar(<a href="http://www.cvedetails.com/cve/CVE-2014-3393/">CVE-2014-3393</a>):</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[ inurl:logon.html</p>
+
+<p>&ldquo;CSCOE&rdquo; ]</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Tan solo tendríamos que</p>
+
+<p>encontrar una característica diferenciadora en alguno de los elementos</p>
+
+<p>(titulo, URL, texto&hellip;) para buscar un página de acceso de un software</p>
+
+<p>en concreto en el que tengamos interés. Otros ejemplos podrían ser, la</p>
+
+<p>búsqueda de paginas de acceso del gestor de aplicaciones virtuales de</p>
+
+<p>Citrix </span>&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;<strong>XenApp</strong></span>&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;o a la plataforma anti-DDoS</p>
+
+<p></span><span style="font-family: Tahoma, sans-serif;"><strong>Peakflow SP</strong></p>
+
+<p></span><span style="font-family: Tahoma, sans-serif;">de Arbor</p>
+
+<p>Networks:</span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">[</p>
+
+<p>inurl:&ldquo;Citrix/XenApp/auth/login.aspx&rdquo; -Xmarks ]</span></p>
+
+<p><span style="color: black;">&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;[ intext:&ldquo;Please Authenticate&rdquo;</p>
+
+<p>intitle:Peakflow</span></span><span style="color: black;">&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;]</span></span></p>
+
+<p><strong>robots.txt</strong></p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Otra cosa interesante con</p>
+
+<p>la que podemos trastear” es con el fichero robots.txt. Este fichero de</p>
+
+<p>texto dicta unas “recomendaciones” para los crawlers de buscadores como</p>
+
+<p>Google o Bing sobre las páginas que no deben indexar. </span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Lo curioso e increíble es</p>
+
+<p>que estos buscadores suelen indexar este fichero, por lo que podemos</p>
+
+<p>obtener aquella información que los administradores quieren mantener</p>
+
+<p>oculta&hellip;¿muy lógico no?. </span></p>
+
+<p><span style="font-family: Tahoma, sans-serif;">Haciendo búsquedas</p>
+
+<p>simples, podremos identificar instalaciones de phpMyAdmin, Wordpress,</p>
+
+<p>Drupal, Joomla&hellip;</span></p>
+
+<p>[ inurl:.com/robots.txt- + &ldquo;Disallow: /phpmyadmin/&rdquo; ]</p>
+
+<p>[ inurl:&ldquo;.com/robots.txt&rdquo; + &ldquo;Disallow: /wp-admin/ ]</p>
+
+<p>[ inurl:&ldquo;.com/robots.txt&rdquo; + &ldquo;Disallow: ?q=admin&rdquo; ]</p>
+
+<p>[ inurl:&ldquo;/robots.txt&rdquo; + &ldquo;Disallow: joomla&rdquo; ]</p>
+
+<p><span style="color: black;">&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;E incluso ir mas allá y buscar</p>
+
+<p>determinados directorios o ficheros, que pretendan ser ocultados.</p>
+
+<p>Cuestión de imaginación.</span></span></p>
+
+<p><span style="color: black;">&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;En esta segunda parte hemos</p>
+
+<p>ejemplificado de forma eficaz como podemos hacer uso de los operadores</p>
+
+<p>de Google para buscar información útil de forma rápida y sencilla. Pero</p>
+
+<p>existen muchas mas posibilidades, como búsqueda de vulnerabilidades</p>
+
+<dl>
+<dt>especificas, RFI, XSS, SQLi&hellip; Pero eso lo veremos en la tercera parte</dt>
+</dl>
+
+<p>:)</span></span></p>
+
+<p><span style="color: black;">&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;</p>
+
+<p></span></span><span style="color: black;">&lt;span</p>
+
+<p>style=&ldquo;font-family: Tahoma, sans-serif;&ldquo;&gt;</p>
+
+<p></span></span>&lt;span</p>
+
+<p>style=&ldquo;background-color: white; color: #666666; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 12px; line-height: 19.2000007629395px;&ldquo;&gt;#ST2Labs</span></p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;background-color: white; color: #666666; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 12px; line-height: 19.2000007629395px;&ldquo;&gt;@seguridadxato2</span></p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;background-color: white; color: #666666; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 12px; line-height: 19.2000007629395px;&ldquo;&gt;@jm_aparicio</span></p>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;background-color: white; color: #666666; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 12px; line-height: 19.2000007629395px;&ldquo;&gt;</p>
+
+<p></span>&lt;span</p>
+
+<p>style=&ldquo;background-color: white; color: #666666; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 12px; line-height: 19.2000007629395px;&ldquo;&gt;</p>
+
+<p></span></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://st2labs.github.io/tags/goohs/">GooHS</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/hacking/">Hacking</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/fase/">Fase</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/formaci%C3%B3n/">Formación</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/pentesting/">Pentesting</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/google/">Google</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/reconocimiento/">Reconocimiento</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/osint/">OSINT</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/web/">Web</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/parte-2/">Parte 2</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-06-20-google-hacking-parte-ii%2f&amp;text=Google%20Hacking%20Parte%20II&amp;via=seguridadxato2" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-06-20-google-hacking-parte-ii%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-06-20-google-hacking-parte-ii%2f&amp;title=Google%20Hacking%20Parte%20II" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-06-20-google-hacking-parte-ii%2f&amp;title=Google%20Hacking%20Parte%20II" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-06-20-google-hacking-parte-ii%2f&amp;title=Google%20Hacking%20Parte%20II" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-06-20-google-hacking-parte-ii%2f&amp;description=Google%20Hacking%20Parte%20II" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/">Guia rápida para realizar un Pentesting</a></li>
+                
+                    <li><a href="/post/2016-04-01-sipi-simple-ip-information-tool-is-out/">[SIPI] Simple IP Information Tool is out</a></li>
+                
+                    <li><a href="/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/">3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación</a></li>
+                
+                    <li><a href="/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/">II Jornada de Seguridad en las Comunicaciones y la Información</a></li>
+                
+                    <li><a href="/post/2015-05-14-venom-vulnerability-all-vm-are-in-risk-cve-2015-3456/">VENOM Vulnerability - All VM are in Risk? (CVE-2015-3456) </a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://st2labs.github.io/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/" data-toggle="tooltip" data-placement="top" title="II Jornada de Seguridad en las Comunicaciones y la Información">&larr; Artículo anterior</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://st2labs.github.io/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/" data-toggle="tooltip" data-placement="top" title="3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:info@seguridadparatodos.es" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/st2labs" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/seguridadxato2" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/julianjgonzalez" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="www.st2labs.com">Julian J Gonzalez</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://st2labs.github.io">Seguridad para Todos</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.54.0</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://st2labs.github.io/js/main.js"></script>
+<script src="https://st2labs.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://st2labs.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

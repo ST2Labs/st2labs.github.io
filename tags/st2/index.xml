@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>St2 on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/st2/</link>
+    <description>Recent content in St2 on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 13 May 2015 17:37:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/st2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Curso: SSN-ST2-01 - Security System and Network</title>
+      <link>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</link>
+      <pubDate>Wed, 13 May 2015 17:37:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</guid>
+      <description>ACTUALIZACIÓN (26/06/2015):
+El curso ha sido cancelado por &amp;ldquo;agotamiento&amp;rdquo; de convocatoria. Hasta
+nuevo aviso, **no habrá más cursos en
+colaboración** ST2Labs y Canal Seguro. *&amp;lt;span
+style=&amp;ldquo;color: #990000;&amp;ldquo;&amp;gt;Aviso: **no soy tutor de ningún otro curso en
+Canal Seguro**, a menos que yo mismo lo anuncie de forma oficial a
+través de mis cuentas de redes sociales y este Blog_.*
+&amp;gt;&amp;gt;&amp;gt; /*
+**
+*[..] lanza el curso de &amp;ldquo;Security
+Systems and Networks” con el firme objetivo de proporcionar al alumno</description>
+    </item>
+    
+    <item>
+      <title>Feliz IV Navidad | Merry xMaS</title>
+      <link>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</link>
+      <pubDate>Tue, 30 Dec 2014 12:31:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</guid>
+      <description>**Ya son las IV (4) Navidades juntos
+!!!!!**
+¡Cómo pasa el tiempo¡ , sigo y seguiré compartiendo los buenos momentos
+con todos vosotros a través del Blog y Twitter
+@seguridadxato2
+@st2labs
+Finalizo el año ilusionado con el nuevo proyecto de vigilancia de
+páginas WEB (webguardshield.com) y con
+la vista puesta en el lanzamiento de
+secnapsis.com | Si olvidarme de mis alumnos del
+Máster de Seguridad TIC que en su</description>
+    </item>
+    
+    <item>
+      <title>Android IMSI-Catcher-Detector AIMSICD</title>
+      <link>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</link>
+      <pubDate>Thu, 23 Oct 2014 18:16:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</guid>
+      <description>Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H+/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.</description>
+    </item>
+    
+  </channel>
+</rss>

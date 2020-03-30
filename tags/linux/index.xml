@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/linux/</link>
+    <description>Recent content in Linux on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Tue, 15 May 2018 18:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>conjure-up / juju Magic &amp; Linux Container (LXD)</title>
+      <link>https://st2labs.github.io/post/2018-05-15-conjure-up-juju-magic-linux-container-lxd/</link>
+      <pubDate>Tue, 15 May 2018 18:00:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2018-05-15-conjure-up-juju-magic-linux-container-lxd/</guid>
+      <description>&amp;lt;span
+style=&amp;ldquo;color: rgba(0 , 0 , 0 , 0.75); font-family: &amp;quot;source serif pro&amp;quot; , serif; font-size: 20px; white-space: pre-wrap;&amp;ldquo;&amp;gt;
+&amp;lt;span
+style=&amp;ldquo;color: rgba(0 , 0 , 0 , 0.75); font-family: &amp;quot;source serif pro&amp;quot; , serif; font-size: 20px; white-space: pre-wrap;&amp;ldquo;&amp;gt;Con
+este titulo más parecido a un capitulo de Harry Potter, os presento el
+Orquestador para Linux Container (LXD). [Ver
+enlace](https://jujucharms.com/)&amp;lt;span
+style=&amp;ldquo;color: rgba(0 , 0 , 0 , 0.75); font-family: &amp;quot;source serif pro&amp;quot; , serif; font-size: 20px; white-space: pre-wrap;&amp;ldquo;&amp;gt;.</description>
+    </item>
+    
+  </channel>
+</rss>

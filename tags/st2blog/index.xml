@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>St2blog on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/st2blog/</link>
+    <description>Recent content in St2blog on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 23 Dec 2015 10:50:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/st2blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Feliz Navidad with Custom Python Reverse Shell</title>
+      <link>https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/</link>
+      <pubDate>Wed, 23 Dec 2015 10:50:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/</guid>
+      <description>Este año es mi quinta (5) Navidad con vosotros, parece que fuera
+ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,
+el camino recorrido hasta ahora ha sido gratificante y emocionante, pero
+quizás lo es aún más el camino que queda por recorrer.
+Como es habitual, la intensidad con la que publico artículos se
+encuentra supeditada a la vida misma (y a los deseos de mi pequeña xD),</description>
+    </item>
+    
+    <item>
+      <title>Curso: SSN-ST2-01 - Security System and Network</title>
+      <link>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</link>
+      <pubDate>Wed, 13 May 2015 17:37:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</guid>
+      <description>ACTUALIZACIÓN (26/06/2015):
+El curso ha sido cancelado por &amp;ldquo;agotamiento&amp;rdquo; de convocatoria. Hasta
+nuevo aviso, **no habrá más cursos en
+colaboración** ST2Labs y Canal Seguro. *&amp;lt;span
+style=&amp;ldquo;color: #990000;&amp;ldquo;&amp;gt;Aviso: **no soy tutor de ningún otro curso en
+Canal Seguro**, a menos que yo mismo lo anuncie de forma oficial a
+través de mis cuentas de redes sociales y este Blog_.*
+&amp;gt;&amp;gt;&amp;gt; /*
+**
+*[..] lanza el curso de &amp;ldquo;Security
+Systems and Networks” con el firme objetivo de proporcionar al alumno</description>
+    </item>
+    
+    <item>
+      <title>Feliz IV Navidad | Merry xMaS</title>
+      <link>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</link>
+      <pubDate>Tue, 30 Dec 2014 12:31:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</guid>
+      <description>**Ya son las IV (4) Navidades juntos
+!!!!!**
+¡Cómo pasa el tiempo¡ , sigo y seguiré compartiendo los buenos momentos
+con todos vosotros a través del Blog y Twitter
+@seguridadxato2
+@st2labs
+Finalizo el año ilusionado con el nuevo proyecto de vigilancia de
+páginas WEB (webguardshield.com) y con
+la vista puesta en el lanzamiento de
+secnapsis.com | Si olvidarme de mis alumnos del
+Máster de Seguridad TIC que en su</description>
+    </item>
+    
+  </channel>
+</rss>

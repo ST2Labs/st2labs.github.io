@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cortex on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/cortex/</link>
+    <description>Recent content in Cortex on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Thu, 14 Sep 2017 12:10:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/cortex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[cymon-analyzer] | Modulo de Análisis Reputación IP en Cymon.io para Cortex Engine | theHive-project</title>
+      <link>https://st2labs.github.io/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/</link>
+      <pubDate>Thu, 14 Sep 2017 12:10:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/</guid>
+      <description>[
+](https://1.bp.blogspot.com/-kZ6n4TsSZ8M/WbpPZgBjirI/AAAAAAAAefc/ZBbTpyBlC7UwHm1BT1OGusI5hv_eO7xVQCLcBGAs/s1600/TheHive%2BProject%2B-%2BHead.png)
+Cuando eres un Tier1/L2 SOC Security Analyst disponer de la mejor
+herramienta para la toma de decisiones es fundamental con objeto de
+&amp;ldquo;responde&amp;rdquo; ante una Amenaza de la mejor forma y lo más rápido posible.
+En mi paso como &amp;ldquo;Manager&amp;rdquo; del antiguo equipo del **Centro de
+Inteligencia y Operaciones de Seguridad, denominado SSIC** por la siglas
+(SVT Security Intelligence &amp;amp; Operations Center), se indicaba que la</description>
+    </item>
+    
+  </channel>
+</rss>

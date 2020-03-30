@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Android IMSI-Catcher-Detector AIMSICD - Seguridad para Todos</title>
+  <meta name="description" content="Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H&#43;/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.">
+  <meta name="author" content="Julian J Gonzalez"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Seguridad para Todos",
+    
+    "url": "https://st2labs.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://st2labs.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://st2labs.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/",
+          "name": "Android i m s i catcher detector a i m s i c d"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Julian J. Gonzalez"
+  },
+  "headline": "Android IMSI-Catcher-Detector AIMSICD",
+  "description" : "Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H&#43;/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.",
+  "inLanguage" : "es",
+  "wordCount": 447,
+  "datePublished" : "2014-10-23T18:16:00",
+  "dateModified" : "2014-10-23T18:16:00",
+  "image" : "https://st2labs.github.io/img/st2400x400.jpg",
+  "keywords" : [ "Seguridad Moviles, Apps, 4G, Ciberseguridad, GSM, 3G, Android, Mobile, 2G, Tools, Hacking, LTE, ST2, ST2Labs" ],
+  "mainEntityOfPage" : "https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://st2labs.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://st2labs.github.io/img/st2400x400.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Android IMSI-Catcher-Detector AIMSICD" />
+<meta property="og:description" content="Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H&#43;/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.">
+<meta property="og:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+<meta property="og:url" content="https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Seguridad para Todos" />
+
+  <meta name="twitter:title" content="Android IMSI-Catcher-Detector AIMSICD" />
+  <meta name="twitter:description" content="Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H&#43;/4G,
+la estación base y el móvil negocian …">
+  <meta name="twitter:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seguridadxato2" />
+  <meta name="twitter:creator" content="@seguridadxato2" />
+  <link href='https://st2labs.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://st2labs.github.io/index.xml" type="application/rss+xml" title="Seguridad para Todos"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://st2labs.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://st2labs.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://st2labs.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26021994-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://st2labs.github.io">Seguridad para Todos</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Seguridad para Todos" href="https://st2labs.github.io">
+            <img class="avatar-img" src="https://st2labs.github.io/img/st2400x400.jpg" alt="Seguridad para Todos" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Android IMSI-Catcher-Detector AIMSICD</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 23 de enero, 2014
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;447&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="../images/2014-10-23-android-imsi-catcher-detector-aimsicd-AIMSICD_ST2_seguridadparatodos.png"><img src="../images/thumbnails/2014-10-23-android-imsi-catcher-detector-aimsicd-AIMSICD_ST2_seguridadparatodos.png" alt="" /></a></p>
+
+<p>Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi</p>
+
+<p><a href="http://www.seguridadparatodos.es/2011/12/video-del-webminar-online-sobre.html">articulo</a></p>
+
+<p>al respecto), todos sabemos que cuando no disponemos de cobertura H+/4G,</p>
+
+<p>la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS</p>
+
+<p>para no quedarte sin cobertura.</p>
+
+<p>Uno de los ataques que esta cogiendo popularidad es utilizar falsa</p>
+
+<p>estaciones base (fake BTS) para capturar el IMSI de los terminales</p>
+
+<p>móviles en el radio de acción en el que actúa. La policía, lo suele</p>
+
+<p>utilizar en concentraciones / manifestaciones, y/o para rastrear a</p>
+
+<p>determinados usuarios/delincuentes.</p>
+
+<p><strong>Tengo el IMSI, y ¿ahora que?</strong></p>
+
+<p>El IMSI (Identidad Internacional del Abonado a un Móvil), una vez se</p>
+
+<p>tiene la identificación del abonado, se puede realizar un ataque de</p>
+
+<p>suplantación de identidad, spoofing de SMS, llamar a cargo de la cuenta</p>
+
+<p>del abonado, etc.</p>
+
+<p>Por ejemplo, en países como Rusia, China o Brazil, los ciberelincuentes</p>
+
+<p>están montando estaciones base (Fake BTS) donde capturar el IMSI para</p>
+
+<p>realizar SPAM y/o ataques de Phising mediante mensajes de texto (SMS).</p>
+
+<p>A esto hay que añadir que los &ldquo;hackers&rdquo; están aplicando ingeniería</p>
+
+<p>inversa a las</p>
+
+<p><a href="http://www.heise.de/netze/meldung/Hacker-bauen-Spionage-Tools-der-NSA-nach-2235339.html">NSA-Tools</a>,</p>
+
+<p>y están liberando aplicaciones como</p>
+
+<p><a href="http://www.nsaplayset.org/twilightvegetable">TWILIGHTVEGETABLE</a> conjunto</p>
+
+<p>de herramienta capaz de monitorizar (capturar) de forma pasiva la red</p>
+
+<p>GSM, o <a href="http://drizzlechair/">DRIZZLECHAIR</a> son 2TBytes con todas las</p>
+
+<p>herramientas necesarias, así como pre-hashed (rainbow tables) para</p>
+
+<p>crackear (descifrar) el cifrado A5/1 de GSM. !! Es solo cuestión de</p>
+
+<p>tiempo que cualquiera pueda espiar las comunicaciones GSM de tu barrio</p>
+
+<p>¡¡</p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p><strong><span style="font-size: large;">SOLUCIÓN / PROTECCIÓN</span></strong></p>
+
+<p>Solo existe una solución &ldquo;preventiva&rdquo; sería configurar el móvil para</p>
+
+<p>evitar que se conecte a la red GSM (2G), esto tiene la ventaja de</p>
+
+<p>proteger en los ataques al protocolo GSM, aunque por contra, te</p>
+
+<p>quedarías sin cobertura en algunas zonas / edificios. </p>
+
+<p>No obstante, deshabilitar la red 2G, protege frente a los ataques de</p>
+
+<p>cifrado de GSM, pero recientemente se</p>
+
+<p><a href="http://www.layakk.com/docs/PicoPerez_Rooted2014_FINAL_bis-ENGLISH.pdf">publico</a></p>
+
+<p>que la red 3G tiene una debilidad que permite</p>
+
+<p><a href="http://www.pki-electronic.com/products/interception-and-monitoring-systems/3g-umts-imsi-catcher/">capturar</a></p>
+
+<p>el ISMI (en el proceso de formar al móvil en 3G a utilizar 2G), por lo</p>
+
+<p>que solamente en 4G podríamos decir que estaríamos completamente</p>
+
+<p>protegidos (de momento). Aunque tendríamos que poder deshabilitar la red</p>
+
+<p>2G/3G en el móvil, ya que los atacantes pueden formar mediante la Fake</p>
+
+<p>BTS a que el terminal móvil utilice 2G/3G.</p>
+
+<p>Por esta razón, se ha liberado la aplicación para Android AIMSICD</p>
+
+<p>([Android</p>
+
+<p>IMSI-Catcher-Detector](<a href="https://secupwn.github.io/Android-IMSI-Catcher-Detector/))">https://secupwn.github.io/Android-IMSI-Catcher-Detector/))</a>,</p>
+
+<p>que detecta y evitar que las estaciones base falsa (fake BTS) en redes</p>
+
+<p>GSM/3G capturen el ISMI en terminales móviles con Android.</p>
+
+<p><a href="../images/2014-10-23-android-imsi-catcher-detector-aimsicd-AIMSICD-Banner_Large.png"><img src="../images/thumbnails/2014-10-23-android-imsi-catcher-detector-aimsicd-AIMSICD-Banner_Large.png" alt="" /></a></p>
+
+<p><a href="../images/2014-10-23-android-imsi-catcher-detector-aimsicd-Cell_Information.png"><img src="../images/thumbnails/2014-10-23-android-imsi-catcher-detector-aimsicd-Cell_Information.png" alt="" /></a><a href="../images/2014-10-23-android-imsi-catcher-detector-aimsicd-Device_Details.png"><img src="../images/thumbnails/2014-10-23-android-imsi-catcher-detector-aimsicd-Device_Details.png" alt="" /></a><a href="../images/2014-10-23-android-imsi-catcher-detector-aimsicd-MapStyle_Normal.png"><img src="../images/thumbnails/2014-10-23-android-imsi-catcher-detector-aimsicd-MapStyle_Normal.png" alt="" /></a></p>
+
+<p><a href="../images/2014-10-23-android-imsi-catcher-detector-aimsicd-MapViewer_Styles.png"><img src="../images/thumbnails/2014-10-23-android-imsi-catcher-detector-aimsicd-MapViewer_Styles.png" alt="" /></a><a href="../images/2014-10-23-android-imsi-catcher-detector-aimsicd-Preferences_Button.png"><img src="../images/thumbnails/2014-10-23-android-imsi-catcher-detector-aimsicd-Preferences_Button.png" alt="" /></a></p>
+
+<p><strong><span style="font-size: large;">REFERENCIAS</span></strong></p>
+
+<ul>
+<li><p>&lt;span</p>
+
+<p>style=&ldquo;font-family: OpenSansBold, &lsquo;Helvetica Neue&rsquo;, Helvetica, Arial, sans-serif !important;&ldquo;&gt;[NSA-Killings</p>
+
+<p>with IMSI-Catcher</p>
+
+<p>drones](<a href="https://firstlook.org/theintercept/article/2014/02/10/the-nsas-secret-role/">https://firstlook.org/theintercept/article/2014/02/10/the-nsas-secret-role/</a>)</span>.</p></li>
+
+<li><p><span style="color: black;">[How easy it is to clone</p>
+
+<p>phones](<a href="http://www.youtube.com/watch?v=Ydo19YOzpzU">http://www.youtube.com/watch?v=Ydo19YOzpzU</a>).</span></p></li>
+
+<li><p>Talk by Karsten Nohl and Luca Melette on [28c3: Defending mobile</p>
+
+<p>phones](<a href="http://youtu.be/YWdHSJsEOck">http://youtu.be/YWdHSJsEOck</a>).</p></li>
+
+<li><p><span style="color: black;">[Stingrays: Biggest Technological</p>
+
+<p>Threat](<a href="https://www.eff.org/deeplinks/2012/10/stingrays-biggest-unknown-technological-threat-cell-phone-privacy">https://www.eff.org/deeplinks/2012/10/stingrays-biggest-unknown-technological-threat-cell-phone-privacy</a>).</span></p></li>
+
+<li><p><span style="color: black;">[GSOC reveals hidden</p>
+
+<p>IMSI-Catcher](<a href="https://www.privacyinternational.org/blog/beirtear-na-imsis-irelands-gsoc-surveillance-inquiry-reveals-use-of-mobile-phone-interception">https://www.privacyinternational.org/blog/beirtear-na-imsis-irelands-gsoc-surveillance-inquiry-reveals-use-of-mobile-phone-interception</a>).</span></p></li>
+
+<li><p>&lt;span</p>
+
+<p>style=&ldquo;color: black;&ldquo;&gt;<a href="https://secupwn.github.io/Android-IMSI-Catcher-Detector/">AIMSICD</a></span></p></li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://st2labs.github.io/tags/seguridad-moviles/">Seguridad Moviles</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/apps/">Apps</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/4g/">4G</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/ciberseguridad/">Ciberseguridad</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/gsm/">GSM</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/3g/">3G</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/mobile/">Mobile</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/2g/">2G</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/tools/">Tools</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/hacking/">Hacking</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/lte/">LTE</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/st2/">ST2</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/st2labs/">ST2Labs</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2014-10-23-android-imsi-catcher-detector-aimsicd%2f&amp;text=Android%20IMSI-Catcher-Detector%20AIMSICD&amp;via=seguridadxato2" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fst2labs.github.io%2fpost%2f2014-10-23-android-imsi-catcher-detector-aimsicd%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2014-10-23-android-imsi-catcher-detector-aimsicd%2f&amp;title=Android%20IMSI-Catcher-Detector%20AIMSICD" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2014-10-23-android-imsi-catcher-detector-aimsicd%2f&amp;title=Android%20IMSI-Catcher-Detector%20AIMSICD" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2014-10-23-android-imsi-catcher-detector-aimsicd%2f&amp;title=Android%20IMSI-Catcher-Detector%20AIMSICD" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2014-10-23-android-imsi-catcher-detector-aimsicd%2f&amp;description=Android%20IMSI-Catcher-Detector%20AIMSICD" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/">Guia rápida para realizar un Pentesting</a></li>
+                
+                    <li><a href="/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/">[cymon-analyzer] | Modulo de Análisis Reputación IP en Cymon.io para Cortex Engine | theHive-project</a></li>
+                
+                    <li><a href="/post/2016-04-01-sipi-simple-ip-information-tool-is-out/">[SIPI] Simple IP Information Tool is out</a></li>
+                
+                    <li><a href="/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/">Feliz Navidad with Custom Python Reverse Shell</a></li>
+                
+                    <li><a href="/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/">Digital Forensics of Android WhatsApp SQLite Database (Part II)</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/" data-toggle="tooltip" data-placement="top" title="SSS REVOLUTION [S]HELSHOCK,[S]SLV3 POODLE ATTACK Y [S]ANDWORM">&larr; Artículo anterior</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://st2labs.github.io/post/2014-11-05-analisis-de-vulnerabilidades-web-y-los-falsos-positivos/" data-toggle="tooltip" data-placement="top" title="Análisis de Vulnerabilidades WEB y los falsos positivos ">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:info@seguridadparatodos.es" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/st2labs" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/seguridadxato2" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/julianjgonzalez" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="www.st2labs.com">Julian J Gonzalez</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://st2labs.github.io">Seguridad para Todos</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.54.0</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://st2labs.github.io/js/main.js"></script>
+<script src="https://st2labs.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://st2labs.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

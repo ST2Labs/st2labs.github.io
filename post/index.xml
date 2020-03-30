@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/post/</link>
+    <description>Recent content in Posts on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Tue, 01 Oct 2019 09:39:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Guia rápida para realizar un Pentesting</title>
+      <link>https://st2labs.github.io/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/</link>
+      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/</guid>
+      <description>Autor: [Israel
+Nada](https://twitter.com/perito_inf/status/1178741955561492481)l
+A través de su cuenta de Twitter, publico un hilo donde explicaba de
+forma sencilla y concreta, su metodología para realizar un Pentesting.
+Guía para realizar un Pentesting de Israel Nadal
+ESCANEO DE LA RED &amp;lt;span
+style=&amp;ldquo;background-color: #f5f8fa; color: #14171a; font-family: system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 15px; white-space: pre-wrap;&amp;ldquo;&amp;gt;nmap
+-sn 10.11.1.* nmap -sL 10.11.1.* nbtscan -r 10.11.1.0/24 smbtree
+netdiscover</description>
+    </item>
+    
+    <item>
+      <title>Great SNORT - Cheat Sheet</title>
+      <link>https://st2labs.github.io/post/2019-10-01-great-snort-cheat-sheet/</link>
+      <pubDate>Tue, 01 Oct 2019 09:18:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2019-10-01-great-snort-cheat-sheet/</guid>
+      <description>Cheat Sheet - SNORT    Hace tiempo escribí un articulo sobre la distribución Security Onion,
+que podéis leer
+aquí.
+El proyecto ha seguido evolucionando, son numerosos los cambios
+introducidos, para aquellos interesados os dejo el enlace:
+- Información: https://securityonion.net
+-
+Download: https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md
+Pero el motivo de escribir esta &amp;ldquo;mini&amp;rdquo; entrada, es compartir con todos
+una hoja resumen de comando sobre SNORT, Please, If you want to know how works SNORT go</description>
+    </item>
+    
+    <item>
+      <title>conjure-up / juju Magic &amp; Linux Container (LXD)</title>
+      <link>https://st2labs.github.io/post/2018-05-15-conjure-up-juju-magic-linux-container-lxd/</link>
+      <pubDate>Tue, 15 May 2018 18:00:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2018-05-15-conjure-up-juju-magic-linux-container-lxd/</guid>
+      <description>&amp;lt;span
+style=&amp;ldquo;color: rgba(0 , 0 , 0 , 0.75); font-family: &amp;quot;source serif pro&amp;quot; , serif; font-size: 20px; white-space: pre-wrap;&amp;ldquo;&amp;gt;
+&amp;lt;span
+style=&amp;ldquo;color: rgba(0 , 0 , 0 , 0.75); font-family: &amp;quot;source serif pro&amp;quot; , serif; font-size: 20px; white-space: pre-wrap;&amp;ldquo;&amp;gt;Con
+este titulo más parecido a un capitulo de Harry Potter, os presento el
+Orquestador para Linux Container (LXD). [Ver
+enlace](https://jujucharms.com/)&amp;lt;span
+style=&amp;ldquo;color: rgba(0 , 0 , 0 , 0.75); font-family: &amp;quot;source serif pro&amp;quot; , serif; font-size: 20px; white-space: pre-wrap;&amp;ldquo;&amp;gt;.</description>
+    </item>
+    
+    <item>
+      <title>[cymon-analyzer] | Modulo de Análisis Reputación IP en Cymon.io para Cortex Engine | theHive-project</title>
+      <link>https://st2labs.github.io/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/</link>
+      <pubDate>Thu, 14 Sep 2017 12:10:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2017-09-14-cymon-analyzer-modulo-de-analisis-reputacion-ip-en-cymon-io-para-cortex-engine-thehive-project/</guid>
+      <description>[
+](https://1.bp.blogspot.com/-kZ6n4TsSZ8M/WbpPZgBjirI/AAAAAAAAefc/ZBbTpyBlC7UwHm1BT1OGusI5hv_eO7xVQCLcBGAs/s1600/TheHive%2BProject%2B-%2BHead.png)
+Cuando eres un Tier1/L2 SOC Security Analyst disponer de la mejor
+herramienta para la toma de decisiones es fundamental con objeto de
+&amp;ldquo;responde&amp;rdquo; ante una Amenaza de la mejor forma y lo más rápido posible.
+En mi paso como &amp;ldquo;Manager&amp;rdquo; del antiguo equipo del **Centro de
+Inteligencia y Operaciones de Seguridad, denominado SSIC** por la siglas
+(SVT Security Intelligence &amp;amp; Operations Center), se indicaba que la</description>
+    </item>
+    
+    <item>
+      <title>Qurtuba Security Congress 2016 </title>
+      <link>https://st2labs.github.io/post/2016-09-19-qurtuba-security-congress-2016/</link>
+      <pubDate>Mon, 19 Sep 2016 21:49:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2016-09-19-qurtuba-security-congress-2016/</guid>
+      <description>**&amp;lt;span
+style=&amp;ldquo;font-family: &amp;quot;georgia&amp;quot; , &amp;quot;times new roman&amp;quot; , serif;&amp;ldquo;&amp;gt;**
+Grandes profesionales de toda España unidos con los mismos objetivos:
+concienciar y enseñar.
+Durante los días 16 y 17 de septiembre ha tenido lugar Qurtuba. Congreso
+de seguridad celebrado en la ciudad de Córdoba que atrae a centenares de
+interesados en ciberseguridad.
+Entre los organizadores encontramos a Miguel Ángel Arroyo y Edu Sánchez.
+Dos profesionales dedicados a la seguridad y la enseñanza cuya pasión es</description>
+    </item>
+    
+    <item>
+      <title>[SIPI] Simple IP Information Tool is out</title>
+      <link>https://st2labs.github.io/post/2016-04-01-sipi-simple-ip-information-tool-is-out/</link>
+      <pubDate>Fri, 01 Apr 2016 16:36:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2016-04-01-sipi-simple-ip-information-tool-is-out/</guid>
+      <description>Cuando se reciben miles de ataques desde Internet, es necesario disponer
+de información que permita tomar decisiones de una forma ágil y rápida.
+En un CERT/SOC, es decir en un centro de operaciones de ciberseguridad,
+es primordial disponer de información sobre una posible amenaza para
+ejecutar acciones y/o medidas de prevención, protección y defensa.
+Introducción
+Por ejemplo, se detecta un tcp_scan en el IPS / Cortafuegos:
+    FortiAnalyzer - Event Manager - IPS    A priori no se sabe si es lícito o no, para resolver el misterio se</description>
+    </item>
+    
+    <item>
+      <title>SVTCloud Monitoring &amp; Security Operations Center (MSOC)</title>
+      <link>https://st2labs.github.io/post/2016-03-17-svtcloud-monitoring-security-operations-center-msoc/</link>
+      <pubDate>Thu, 17 Mar 2016 11:30:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2016-03-17-svtcloud-monitoring-security-operations-center-msoc/</guid>
+      <description>Presentación
+Desde el pasado mes de
+Febrero, tengo el placer de trabajar en
+@SVTCloud&amp;lt;span
+style=&amp;ldquo;text-align: justify;&amp;ldquo;&amp;gt; (www.svtcloud.com&amp;lt;span
+style=&amp;ldquo;text-align: justify;&amp;ldquo;&amp;gt;) como el responsable del servicio y
+departamento de Monitorización y Operaciones de Seguridad
+(MSOC).
+Entre otros, el equipo de Seguridad del MSOC, ofrece los servicios:
+ - PSaaS - Perimetral Security as a Service, que consiste en la
+gestión operativa de dispositivos de seguridad perimetral en modo
+servicio.
+- Alerta Temprana: realizando una monitorización constante 24x7,</description>
+    </item>
+    
+    <item>
+      <title>Feliz Navidad with Custom Python Reverse Shell</title>
+      <link>https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/</link>
+      <pubDate>Wed, 23 Dec 2015 10:50:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-23-feliz-navidad-with-custom-python-reverse-shell/</guid>
+      <description>Este año es mi quinta (5) Navidad con vosotros, parece que fuera
+ayer (25/Dic 2011) cuando celebré la primera Navidad con todos vosotros,
+el camino recorrido hasta ahora ha sido gratificante y emocionante, pero
+quizás lo es aún más el camino que queda por recorrer.
+Como es habitual, la intensidad con la que publico artículos se
+encuentra supeditada a la vida misma (y a los deseos de mi pequeña xD),</description>
+    </item>
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part III)</title>
+      <link>https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/</link>
+      <pubDate>Wed, 16 Dec 2015 08:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/</guid>
+      <description>En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte
+I](http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html)
+y
+II,
+la capacidad de recuperación de mensajes eliminados es inversamente
+proporcional al periodo de tiempo transcurrido desde que se produjo el
+hecho, así como a la intensidad de uso de la aplicación en dicho
+periodo. Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor
+es la probabilidad de recuperar la información.</description>
+    </item>
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part II)</title>
+      <link>https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/</link>
+      <pubDate>Wed, 02 Dec 2015 18:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/</guid>
+      <description>En esta segunda parte, se procederá a recuperar **un mensaje que ha sido
+eliminado** en la base de datos SQLite de la aplicación WhatsApp y se
+analizará la información obtenida para determinar cuando se envío el
+mensaje (timestamp) recuperado.
+Estructura de SQLite (II)
+Una vez que conocemos el esquema de la base de datos, y como se organiza
+la información útil (payload data) dentro de las celdas de cada una de</description>
+    </item>
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part I)</title>
+      <link>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</link>
+      <pubDate>Thu, 26 Nov 2015 18:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</guid>
+      <description>Hace poco me he tenido que enfrentar al análisis forense de la
+aplicación Whatsapp en Android, y la sorpresa es la limitada información
+que existe al respecto. Whatsapp no tiene una API pública, y no sólo
+eso, sino que persigue claramente a quién tras aplicar ingeniería
+inversa publica información al respecto, me estoy refiriendo sobretodo a
+la información del protocolo interno de la aplicación.
+Antecedentes
+Independientemente de la información existente, mi reto no era descifrar</description>
+    </item>
+    
+    <item>
+      <title>Windows Forensics Tips - USB Write Protected</title>
+      <link>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</link>
+      <pubDate>Mon, 19 Oct 2015 10:34:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</guid>
+      <description>Hi every one!
+This post I have decided write in english why? Answer is why not? In
+Digital Forensics it&amp;rsquo;s so important to mantain integrity of evidence, is
+for this reason what you need read data without any modification.
+Sometime you get the &amp;ldquo;evidence&amp;rdquo; and write into a USB stick, then if you
+have to read data into windows device, you must enable write
+protetection for USB device to avoid any modification of them.</description>
+    </item>
+    
+    <item>
+      <title>3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación</title>
+      <link>https://st2labs.github.io/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/</link>
+      <pubDate>Fri, 03 Jul 2015 20:25:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/</guid>
+      <description>! Cómo pasa el tiempo ¡ Ya ésta aquí la tercera edición del Máster
+Seguridad de la Comunicaciones y la Información (#MSTIC16) donde
+impartiré la clase práctica de Técnicas de
+Hacking y Pentesting, cómo **novedad este año
+las 5 clases que impartiré serán totalmente en el laboratorio**,
+con ejemplo y casos prácticos donde los alumnos se enfrentaran a casos
+reales, aprenderán a manejar las herramientas, interpretar los
+resultados y resolver problemas en entorno reales.</description>
+    </item>
+    
+    <item>
+      <title>Google Hacking Parte II</title>
+      <link>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</link>
+      <pubDate>Sat, 20 Jun 2015 19:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-06-20-google-hacking-parte-ii/</guid>
+      <description>****
+GOOGLE HACKING: PARTE II
+****
+Venimos de [Google
+Hacking
+I](http://www.seguridadparatodos.es/2013/07/google-hacking-parte-i.html)&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma, sans-serif;&amp;ldquo;&amp;gt;, donde habíamos introducido
+los operadores que nos permiten exprimir al máximo este famoso buscador.
+Hoy veremos ejemplos sencillos de como podemos utilizar estos
+operadores.
+****
+&amp;lt;span
+style=&amp;ldquo;font-family: Tahoma; font-size: 16px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;&amp;ldquo;&amp;gt;Listado
+de directorios
+Una de las acciones
+habituales a la hora de mejorar la seguridad de un sitio web, es</description>
+    </item>
+    
+    <item>
+      <title>II Jornada de Seguridad en las Comunicaciones y la Información</title>
+      <link>https://st2labs.github.io/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/</link>
+      <pubDate>Sat, 23 May 2015 18:45:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-23-ii-jornada-de-seguridad-en-las-comunicaciones-y-la-informacion/</guid>
+      <description>El próximo 9/Junio estaré impartiendo un Taller práctico sobre
+Metasploit en la Escuela Técnica Superior de Ingeniera de Sevilla, !!
+sólo 100 plazas ¡¡¡ A continuación toda la información que necesitas
+saber, daros prisa, además tendréis un diploma de asistencia.
+Objetivo
+Jornada especialmente dirigido a Ingeniería de Telecomunicaciones e
+Ingeniería Informática, esta jornada pretende dar a conocer a los
+alumnos de últimos cursos el modelo de negocio de la seguridad en las</description>
+    </item>
+    
+    <item>
+      <title>VENOM Vulnerability - All VM are in Risk? (CVE-2015-3456) </title>
+      <link>https://st2labs.github.io/post/2015-05-14-venom-vulnerability-all-vm-are-in-risk-cve-2015-3456/</link>
+      <pubDate>Thu, 14 May 2015 18:30:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-14-venom-vulnerability-all-vm-are-in-risk-cve-2015-3456/</guid>
+      <description>VENOM (CVE-2015-3456)
+is (Virtualized Eniroment Negleted Operations Manipulation), lo que
+viene a decir, que se ha descubierto una vulnerabilidad que permite
+acceder por completo al entorno de ejecución del hipervisor desde una
+máquina virtual cualquiera, lo que significa acceder por completo al
+entorno de ejecución del resto de máquina virtuales que tiene el Host en
+ejecución.
+Xen Security Advisory CVE-2015-3456 / XSA-133 version 2 Privilege escalation via emulated floppy disk drive A continuación un ejemplo gráfico que ilustrará en que consiste la</description>
+    </item>
+    
+    <item>
+      <title>Curso: SSN-ST2-01 - Security System and Network</title>
+      <link>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</link>
+      <pubDate>Wed, 13 May 2015 17:37:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-13-curso-ssn-st2-01-security-system-and-network/</guid>
+      <description>ACTUALIZACIÓN (26/06/2015):
+El curso ha sido cancelado por &amp;ldquo;agotamiento&amp;rdquo; de convocatoria. Hasta
+nuevo aviso, **no habrá más cursos en
+colaboración** ST2Labs y Canal Seguro. *&amp;lt;span
+style=&amp;ldquo;color: #990000;&amp;ldquo;&amp;gt;Aviso: **no soy tutor de ningún otro curso en
+Canal Seguro**, a menos que yo mismo lo anuncie de forma oficial a
+través de mis cuentas de redes sociales y este Blog_.*
+&amp;gt;&amp;gt;&amp;gt; /*
+**
+*[..] lanza el curso de &amp;ldquo;Security
+Systems and Networks” con el firme objetivo de proporcionar al alumno</description>
+    </item>
+    
+    <item>
+      <title>Password Alert: Plugin para Google Chrome - Protege tus cuentas de Google</title>
+      <link>https://st2labs.github.io/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/</link>
+      <pubDate>Fri, 01 May 2015 13:06:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-05-01-password-alert-plugin-para-google-chrome-protege-tus-cuentas-de-google/</guid>
+      <description>Si eres de los que utiliza Google Chrome como navegador por defecto a
+diario en casa y el trabajo, te recomiendo que sigas leyendo.
+**&amp;ndash; Google Chrome Plugins - Password
+Alert**
+Google presenta una extensión para Google Chrome que te ayudará a
+protegerte frente a ataques de phishing que intentan conseguir tu
+contraseña de acceso a las cuentas de Google.
+ *Alerta de protección de contraseña te ayuda a protegerte contra</description>
+    </item>
+    
+    <item>
+      <title>Rooting my Nexus 4 with Android 5.0.1</title>
+      <link>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</link>
+      <pubDate>Sun, 12 Apr 2015 11:13:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/</guid>
+      <description>Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
+así para ampliar el público objetivo :
+
+First of all, **What do you need to
+start?**
+ 1 . **Have USB Driver
+installed** in your system [ I supposed you have Windows]
+ 2
+. **Enable
+USB Debbugin Options** ( press 7 times in build info into Settings Menu
+)
+3 . Need have Bootloader unlocked, if you don&amp;rsquo;t, please check out</description>
+    </item>
+    
+    <item>
+      <title>GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense</title>
+      <link>https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/</link>
+      <pubDate>Fri, 10 Apr 2015 15:10:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/</guid>
+      <description>Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
+Redes Móviles, en dicha charla os comentaba las debilidades /
+vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado en diciembre de 2014, durante el congreso del [Chaos
+Computer
+Club](http://events.ccc.de/congress/2014/wiki/Static:Main_Page), los
+investigadores de Security ReseachLabs **han
+publicado una vez más las debilidades existentes** en las redes móviles
+actuales, y además, han creado un par de proyectos software libre, el</description>
+    </item>
+    
+    <item>
+      <title>¿Cómo elegir un Antivirus?</title>
+      <link>https://st2labs.github.io/post/2015-04-08-como-elegir-un-antivirus/</link>
+      <pubDate>Wed, 08 Apr 2015 18:36:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-08-como-elegir-un-antivirus/</guid>
+      <description>Ha llegado la hora de renovarse o morir, en lo referente al Antivirus -
+por supuesto - y es que desde que actualice a la versión de Windows 8.1
+decidí darle una oportunidad al software anti-malware que trae instalado
+por defecto - Windows Defender, sin embargo en los últimos días me
+llegan rumores de un antivirus gratuito que esta teniendo una gran
+acogida entre los usuarios, llamado [360 Total
+Security](http://www.360totalsecurity.com/es/), donde algunos test</description>
+    </item>
+    
+    <item>
+      <title>Python para Hacking (I) - Run a secure Shell command </title>
+      <link>https://st2labs.github.io/post/2015-04-02-python-para-hacking-i-run-a-secure-shell-command/</link>
+      <pubDate>Thu, 02 Apr 2015 13:36:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-04-02-python-para-hacking-i-run-a-secure-shell-command/</guid>
+      <description>Ahora que estoy de vacaciones (bendita semana santa) he sacado un hueco
+para terminar uno de los muchos artículos que tengo pensado escribir
+sobre el lenguaje de programación python, donde a pesar de ser yo un
+recién llegado al mundo python, ya me siento extremadamente cómodo
+programando en python, hasta tal punto que se ha convertido en mi
+lenguaje favorito.
+En artículos anteriores os hable de como usar python como lenguaje de</description>
+    </item>
+    
+    <item>
+      <title>Taller de Iniciación al Hacking Ético</title>
+      <link>https://st2labs.github.io/post/2015-01-23-taller-de-iniciacion-al-hacking-etico/</link>
+      <pubDate>Fri, 23 Jan 2015 11:07:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-01-23-taller-de-iniciacion-al-hacking-etico/</guid>
+      <description>Hola a tod@s
+Hace tiempo que no escribo ningún artículo, esto no es por falta de
+ganas, sino más bien de tiempo (muchas ideas se pasan a diario por mi
+cabeza, y muchas otras historias sobre las que me gustaría escribir)
+pero aquí estoy escribiendo estas lineas sobre mi participación en el
+próximo Taller de Hacking Ético que organización [Asociación Nacional de
+Tasadores y Peritos Informáticos
+Judiciales](http://www.antpji.com/antpji2013/index.php/661-taller-de-iniciacion-al-hacking-etico)
+, junto a UDIMA (Universidad a Distancia de</description>
+    </item>
+    
+    <item>
+      <title>Feliz IV Navidad | Merry xMaS</title>
+      <link>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</link>
+      <pubDate>Tue, 30 Dec 2014 12:31:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-12-30-feliz-iv-navidad-merry-xmas/</guid>
+      <description>**Ya son las IV (4) Navidades juntos
+!!!!!**
+¡Cómo pasa el tiempo¡ , sigo y seguiré compartiendo los buenos momentos
+con todos vosotros a través del Blog y Twitter
+@seguridadxato2
+@st2labs
+Finalizo el año ilusionado con el nuevo proyecto de vigilancia de
+páginas WEB (webguardshield.com) y con
+la vista puesta en el lanzamiento de
+secnapsis.com | Si olvidarme de mis alumnos del
+Máster de Seguridad TIC que en su</description>
+    </item>
+    
+    <item>
+      <title>Análisis de Vulnerabilidades WEB y los falsos positivos </title>
+      <link>https://st2labs.github.io/post/2014-11-05-analisis-de-vulnerabilidades-web-y-los-falsos-positivos/</link>
+      <pubDate>Wed, 05 Nov 2014 20:27:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-11-05-analisis-de-vulnerabilidades-web-y-los-falsos-positivos/</guid>
+      <description>En el Análisis de Vulnerabilidades es muy frecuente que se realicen
+varios test / scanner con diferentes herramientas para llevar a cabo una
+eliminación de falsos positivos (especialmente durante Auditorias de
+Seguridad a aplicación WEB). Una vez tienes el resultado, se verifican
+manualmente los resultados con objeto de ofrecer un informe con el
+mínimo número de falsos positivos posibles.
+En un CSIRT (*&amp;lt;span
+style=&amp;ldquo;background-color: white; color: #252525; font-family: sans-serif; font-size: 14px; line-height: 22.</description>
+    </item>
+    
+    <item>
+      <title>Android IMSI-Catcher-Detector AIMSICD</title>
+      <link>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</link>
+      <pubDate>Thu, 23 Oct 2014 18:16:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</guid>
+      <description>Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H+/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.</description>
+    </item>
+    
+    <item>
+      <title>SSS REVOLUTION [S]HELSHOCK,[S]SLV3 POODLE ATTACK Y [S]ANDWORM</title>
+      <link>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</link>
+      <pubDate>Wed, 15 Oct 2014 19:27:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</guid>
+      <description>Estaba yo desempolvando el teclado cuando en un abrir y cerrar de ojos,
+aparecen las [SSS] como si de la santísima trinidad se tratase,
+primero Shellshock, despues Sandworm (0-day en sistemas Windows )y ahora
+cifrado SSLv3, si juntas las tres vulnerabilidades se da el apocalisis
+de Internet, de hecho casi poco ese título en lugar del actual, pero
+entonces parecería un Blog con tintes religiosos, y no quisiera yo que</description>
+    </item>
+    
+  </channel>
+</rss>

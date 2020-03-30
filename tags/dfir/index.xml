@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dfir on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/dfir/</link>
+    <description>Recent content in Dfir on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 16 Dec 2015 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/dfir/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part III)</title>
+      <link>https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/</link>
+      <pubDate>Wed, 16 Dec 2015 08:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/</guid>
+      <description>En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte
+I](http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html)
+y
+II,
+la capacidad de recuperación de mensajes eliminados es inversamente
+proporcional al periodo de tiempo transcurrido desde que se produjo el
+hecho, así como a la intensidad de uso de la aplicación en dicho
+periodo. Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor
+es la probabilidad de recuperar la información.</description>
+    </item>
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part II)</title>
+      <link>https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/</link>
+      <pubDate>Wed, 02 Dec 2015 18:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/</guid>
+      <description>En esta segunda parte, se procederá a recuperar **un mensaje que ha sido
+eliminado** en la base de datos SQLite de la aplicación WhatsApp y se
+analizará la información obtenida para determinar cuando se envío el
+mensaje (timestamp) recuperado.
+Estructura de SQLite (II)
+Una vez que conocemos el esquema de la base de datos, y como se organiza
+la información útil (payload data) dentro de las celdas de cada una de</description>
+    </item>
+    
+    <item>
+      <title>Digital Forensics of Android WhatsApp SQLite Database (Part I)</title>
+      <link>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</link>
+      <pubDate>Thu, 26 Nov 2015 18:00:00 +0100</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/</guid>
+      <description>Hace poco me he tenido que enfrentar al análisis forense de la
+aplicación Whatsapp en Android, y la sorpresa es la limitada información
+que existe al respecto. Whatsapp no tiene una API pública, y no sólo
+eso, sino que persigue claramente a quién tras aplicar ingeniería
+inversa publica información al respecto, me estoy refiriendo sobretodo a
+la información del protocolo interno de la aplicación.
+Antecedentes
+Independientemente de la información existente, mi reto no era descifrar</description>
+    </item>
+    
+    <item>
+      <title>Windows Forensics Tips - USB Write Protected</title>
+      <link>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</link>
+      <pubDate>Mon, 19 Oct 2015 10:34:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2015-10-19-windows-forensics-tips-usb-write-protected/</guid>
+      <description>Hi every one!
+This post I have decided write in english why? Answer is why not? In
+Digital Forensics it&amp;rsquo;s so important to mantain integrity of evidence, is
+for this reason what you need read data without any modification.
+Sometime you get the &amp;ldquo;evidence&amp;rdquo; and write into a USB stick, then if you
+have to read data into windows device, you must enable write
+protetection for USB device to avoid any modification of them.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/bash/</link>
+    <description>Recent content in Bash on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Wed, 15 Oct 2014 19:27:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SSS REVOLUTION [S]HELSHOCK,[S]SLV3 POODLE ATTACK Y [S]ANDWORM</title>
+      <link>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</link>
+      <pubDate>Wed, 15 Oct 2014 19:27:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-15-sss-revolution-s-helshock-s-slv3-poodle-attack-y-s-andworm/</guid>
+      <description>Estaba yo desempolvando el teclado cuando en un abrir y cerrar de ojos,
+aparecen las [SSS] como si de la santísima trinidad se tratase,
+primero Shellshock, despues Sandworm (0-day en sistemas Windows )y ahora
+cifrado SSLv3, si juntas las tres vulnerabilidades se da el apocalisis
+de Internet, de hecho casi poco ese título en lugar del actual, pero
+entonces parecería un Blog con tintes religiosos, y no quisiera yo que</description>
+    </item>
+    
+  </channel>
+</rss>

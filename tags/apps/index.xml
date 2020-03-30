@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apps on Seguridad para Todos</title>
+    <link>https://st2labs.github.io/tags/apps/</link>
+    <description>Recent content in Apps on Seguridad para Todos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
+    <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
+    <lastBuildDate>Thu, 23 Oct 2014 18:16:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://st2labs.github.io/tags/apps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android IMSI-Catcher-Detector AIMSICD</title>
+      <link>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</link>
+      <pubDate>Thu, 23 Oct 2014 18:16:00 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2014-10-23-android-imsi-catcher-detector-aimsicd/</guid>
+      <description>Las vulnerabilidad en el protocolo GSM/3G no es algo novedoso (véase mi
+articulo
+al respecto), todos sabemos que cuando no disponemos de cobertura H+/4G,
+la estación base y el móvil negocian conectarse mediante 2G/GSM/GPRS
+para no quedarte sin cobertura.
+Uno de los ataques que esta cogiendo popularidad es utilizar falsa
+estaciones base (fake BTS) para capturar el IMSI de los terminales
+móviles en el radio de acción en el que actúa.</description>
+    </item>
+    
+  </channel>
+</rss>

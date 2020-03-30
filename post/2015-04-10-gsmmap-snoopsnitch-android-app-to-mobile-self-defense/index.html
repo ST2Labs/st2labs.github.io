@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense - Seguridad para Todos</title>
+  <meta name="description" content="Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
+Redes Móviles, en dicha charla os comentaba las debilidades /
+vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado en diciembre de 2014, durante el congreso del [Chaos
+Computer
+Club](http://events.ccc.de/congress/2014/wiki/Static:Main_Page), los
+investigadores de Security ReseachLabs **han
+publicado una vez más las debilidades existentes** en las redes móviles
+actuales, y además, han creado un par de proyectos software libre, el">
+  <meta name="author" content="Julian J Gonzalez"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Seguridad para Todos",
+    
+    "url": "https://st2labs.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://st2labs.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://st2labs.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/",
+          "name": "G s mmap &amp; snoopsnitch android app to mobile self defense"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Julian J. Gonzalez"
+  },
+  "headline": "GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense",
+  "description" : "Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
+Redes Móviles, en dicha charla os comentaba las debilidades /
+vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado en diciembre de 2014, durante el congreso del [Chaos
+Computer
+Club](http://events.ccc.de/congress/2014/wiki/Static:Main_Page), los
+investigadores de Security ReseachLabs **han
+publicado una vez más las debilidades existentes** en las redes móviles
+actuales, y además, han creado un par de proyectos software libre, el",
+  "inLanguage" : "es",
+  "wordCount": 812,
+  "datePublished" : "2015-04-10T15:10:00",
+  "dateModified" : "2015-04-10T15:10:00",
+  "image" : "https://st2labs.github.io/img/st2400x400.jpg",
+  "keywords" : [ "Congress, Hacking, Security, GSM, 3G, 31C, Android, Mobile, Defensa, Map" ],
+  "mainEntityOfPage" : "https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://st2labs.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://st2labs.github.io/img/st2400x400.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense" />
+<meta property="og:description" content="Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
+Redes Móviles, en dicha charla os comentaba las debilidades /
+vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado en diciembre de 2014, durante el congreso del [Chaos
+Computer
+Club](http://events.ccc.de/congress/2014/wiki/Static:Main_Page), los
+investigadores de Security ReseachLabs **han
+publicado una vez más las debilidades existentes** en las redes móviles
+actuales, y además, han creado un par de proyectos software libre, el">
+<meta property="og:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+<meta property="og:url" content="https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Seguridad para Todos" />
+
+  <meta name="twitter:title" content="GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense" />
+  <meta name="twitter:description" content="Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
+Redes Móviles, en dicha charla os comentaba las debilidades /
+vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado …">
+  <meta name="twitter:image" content="https://st2labs.github.io/img/st2400x400.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seguridadxato2" />
+  <meta name="twitter:creator" content="@seguridadxato2" />
+  <link href='https://st2labs.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://st2labs.github.io/index.xml" type="application/rss+xml" title="Seguridad para Todos"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://st2labs.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://st2labs.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://st2labs.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26021994-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://st2labs.github.io">Seguridad para Todos</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Seguridad para Todos" href="https://st2labs.github.io">
+            <img class="avatar-img" src="https://st2labs.github.io/img/st2400x400.jpg" alt="Seguridad para Todos" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 10 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;812&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_Head.png"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_Head.png" alt="" /></a></p>
+
+<p>Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en</p>
+
+<p>Redes Móviles, en dicha charla os comentaba las debilidades /</p>
+
+<p>vulnerabilidades que existen en las redes móviles GSM/3G. </p>
+
+<p>El año pasado en diciembre de 2014, durante el congreso del [Chaos</p>
+
+<p>Computer</p>
+
+<p>Club](<a href="http://events.ccc.de/congress/2014/wiki/Static:Main_Page">http://events.ccc.de/congress/2014/wiki/Static:Main_Page</a>), los</p>
+
+<p>investigadores de <a href="https://srlabs.de/">Security ReseachLabs</a> **han</p>
+
+<p>publicado una vez más las debilidades existentes** en las redes móviles</p>
+
+<p>actuales, y además, han creado un par de proyectos software libre, el</p>
+
+<p>primero para alertar y mostrar la inseguridad / vulnerabilidades de las</p>
+
+<p>redes móviles en los operadores actuales, y el segundo, una herramienta</p>
+
+<p>orientada a la protección , donde se monitoriza la red móvil para</p>
+
+<p>alertar y advertir de ataques en la red de tu operador.</p>
+
+<p>**<span style="font-size: large;">[ Mobile Self-Defense / SnoopsNitch</p>
+
+<p>]</span>**</p>
+
+<p><a href="https://srlabs.de/">Srlabs</a> ha creado y puesto a disposición de todo el</p>
+
+<p>mundo (proyecto OpenSource) una aplicación para móviles Android, llamada</p>
+
+<p><a href="https://opensource.srlabs.de/projects/snoopsnitch">snoopsnitch</a>, que</p>
+
+<p>permite analizar la seguridad de la red móvil de tu operador de</p>
+
+<p>telefonía, y detectar algunos de las amenazas existentes, como</p>
+
+<p>estaciones base (BTS) falsa que capturan el IMSI, seguimiento de</p>
+
+<p>usuarios (Tracking)  y actualizaciones silenciosas, etc.</p>
+
+<p>Además, se puede utilizar la aplicación SnoopSnitch para colaborar en el</p>
+
+<p>proyecto open source que muestra y compara la seguridad que existe entre</p>
+
+<p>las redes móviles de los operadores de telefonía móvil, este proyecto</p>
+
+<p>es <a href="http://gsmmap.org/">http://gsmmap.org/</a>.</p>
+
+<p><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-ovUoaLp8FpQPQcQRc7N7DYcGdVUWGi7iCOdJLBx9jWVjHCXKxZ3-XZHspu5hamdztA=h900-rw"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-ovUoaLp8FpQPQcQRc7N7DYcGdVUWGi7iCOdJLBx9jWVjHCXKxZ3-XZHspu5hamdztA=h900-rw" alt="" /></a><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-jNoivsBx0jVSF-NdwhNN_QWqvNFkaKyj-NgtQVqPnzZR6tsxVcs5MNrFX3Y4VgD9tbo=h900-rw"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-jNoivsBx0jVSF-NdwhNN_QWqvNFkaKyj-NgtQVqPnzZR6tsxVcs5MNrFX3Y4VgD9tbo=h900-rw" alt="" /></a></p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p>**</p>
+
+<p><strong>Requisitos</strong></p>
+
+<p>Para poder ejecutar y que funcione la aplicación en el móvil se deben de</p>
+
+<p>cumplir los siguientes requisitos:</p>
+
+<ul>
+<li><p>Qualcomm-based Android phone</p>
+
+<p>(see <a href="https://opensource.srlabs.de/projects/snoopsnitch/wiki/DeviceList" class="wiki-page">device list</a>)</p></li>
+
+<li><p><strong>Stock</strong><span style="line-height: 16.7999992370605px;"> Android</p>
+
+<p>ROM, version 4.1 or later</span></p>
+
+<p><span style="line-height: 16.7999992370605px;">Note: Custom Android</p>
+
+<p>ROMs like CyanogenMod may or may not work, depending on the</p>
+
+<p>availability of a Qualcomm DIAG kernel driver (DIAG_CHAR).</span></p></li>
+
+<li><p><strong>Root privileges</strong> on phone</p></li>
+</ul>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;background-color: white; color: #333333; font-family: &lsquo;Trebuchet MS&rsquo;, Verdana, sans-serif; font-size: 14px; line-height: 16.7999992370605px;&ldquo;&gt;Lista</p>
+
+<p>completa de compatibilidad de</p>
+
+<p>dispositivos: </span><a href="https://opensource.srlabs.de/projects/snoopsnitch/wiki/DeviceList">https://opensource.srlabs.de/projects/snoopsnitch/wiki/DeviceList</a></p>
+
+<table>
+
+<tbody>
+
+<tr class="odd">
+
+<td>G</td>
+
+<td>Nexus 4 / Mako</td>
+
+<td>LG-E960</td>
+
+<td>CyanogenMod 11-20141115-SNAPSHOT-M12-mako or <strong><a href="http://forum.xda-developers.com/google-nexus-5/general/radio-enable-lte-band-3-nexus-5-d820-t2928561" class="external">special kernel</a></strong></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p><span style="font-size: x-small;">Para los poseedores de un Nexus 4 se</p>
+
+<p>necesita una ROM Cynogen con un Kernel modificado. Esto entra en mi</p>
+
+<p>lista de TO-DO!</span></p>
+
+<h3 id="incompatible-devices">Incompatible Devices:</h3>
+
+<p>The following devices have been found to be incompatible and</p>
+
+<p>can <strong>not</strong> be used with SnoopSnitch:</p>
+
+<ul>
+<li><p><strong>Unsupported.</strong> Devices with custom ROM such as CyanogenMod which</p>
+
+<p>lacks the Qualcomm DIAG kernel driver (DIAG_CHAR)</p></li>
+
+<li><p><strong>Unsupported.</strong> Every device without Qualcomm chipset</p></li>
+
+<li><p><strong>Unsupported.</strong> Samsung Galaxy S2 &amp; S3</p></li>
+
+<li><p><strong>Unsupported.</strong> Nexus 5 with stock Android</p></li>
+
+<li><p><strong>Unsupported.</strong> Huawei Ascend Y300</p></li>
+</ul>
+
+<p>&lt;span</p>
+
+<p>style=&ldquo;background-color: white; color: #333333; font-family: &lsquo;Trebuchet MS&rsquo;, Verdana, sans-serif; font-size: 14px;&ldquo;&gt;<strong>Download:</strong></span></p>
+
+<ul>
+<li><p><a href="https://opensource.srlabs.de/attachments/download/110/SnoopSnitch-0.9.5.apk" class="external">Pre-compiled .apk</a> (SHA1:</p>
+
+<p>58a4083ed6d50cf2a3de833233b42a0df6dc19e9)</p></li>
+
+<li><p><a href="https://play.google.com/store/apps/details?id=de.srlabs.snoopsnitch" class="external">Pre-compiled .apk from Google Play Store</a></p></li>
+
+<li><p><a href="https://f-droid.org/repository/browse/?fdid=de.srlabs.snoopsnitch" class="external">Pre-compiled .apk from F-Droid</a></p></li>
+
+<li><p>Source Code:</p>
+<div class="highlight"><pre class="chroma">git clone --recursive https://opensource.srlabs.de/git/snoopsnitch.git</pre></div></li>
+</ul>
+
+<p>SnoopSnitch is released under the GPL v3 license</p>
+
+<p>(cf. <a href="https://opensource.srlabs.de/projects/snoopsnitch/repository/entry/COPYING" class="source">source:COPYING</a>).</p>
+
+<p>The app is known to built under Linux and OS X,</p>
+
+<p>see <a href="https://opensource.srlabs.de/projects/snoopsnitch/repository/entry/README" class="source">source:README</a> for</p>
+
+<p>build instructions.</p>
+
+<p><strong><span style="font-size: large;">[ GSMmap]</span></strong></p>
+
+<p>**&lt;span</p>
+
+<p>style=&ldquo;background-color: rgba(255, 255, 255, 0.952941); color: #333333; font-family: &lsquo;Helvetica Neue&rsquo;, Helvetica, Arial, sans-serif; line-height: 20px;&ldquo;&gt;</p>
+
+<p></span>&lt;span</p>
+
+<p>style=&ldquo;background-color: rgba(255, 255, 255, 0.952941); color: #333333; font-family: &lsquo;Helvetica Neue&rsquo;, Helvetica, Arial, sans-serif; line-height: 20px;&ldquo;&gt;GSM</p>
+
+<p>Security Map compares the protection capabilities of mobile</p>
+
+<p>networks </span>**</p>
+
+<p>Se observa que en España hay muy pocos usuarios contribuyendo a este</p>
+
+<p>proyecto, lo que implica escasos datos para el análisis, sin embargo, en</p>
+
+<p>Alemania, existen una gran cantidad de usuarios aportando datos al</p>
+
+<p>proyecto.</p>
+
+<p><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_3.png"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_3.png" alt="" /></a><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_!.png"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_!.png" alt="" /></a></p>
+
+<p>Con los datos aportados, se analizan y se generan datos sobre la</p>
+
+<p>seguridad de las redes de los operadores de telefonía móvil. A</p>
+
+<p>continuación una captura de pantalla que se puede consultar en</p>
+
+<p>www.gsmmap.org sobre España y Alemania, respecto a la protección que</p>
+
+<p>ofrecen las operadoras móviles a ataques de interceptación de la</p>
+
+<p>comunicación.</p>
+
+<p><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_2.png"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_2.png" alt="" /></a></p>
+
+<p><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_4.png"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-Mobile_ST2_gsmap_4.png" alt="" /></a></p>
+
+<p>En el caso de España, Vodafone y Movistar son las que más protección en</p>
+
+<p>redes 3G ofrecen, para ataques de interceptación de la comunicación. Sin</p>
+
+<p>embargo, Orange no sale tan bien parada en el analisis comparativo. No</p>
+
+<p>obstante, se debe de analizar el resultado de forma cauta, al verificar</p>
+
+<p>que no existen suficientes datos, es decir, hay pocos usuarios</p>
+
+<p>contribuyendo a este proyecto en España.</p>
+
+<p>Pero al menos, en mi opinión, es un dato muy interesante y una página</p>
+
+<p>WEB a tener en consideración si decides cambiar de operador móvil, un</p>
+
+<p>nuevo factor de decisión a incluir,y no solo valorar a la operadora por</p>
+
+<p>su tarifa / plan o velocidad de los datos.</p>
+
+<p>Además, observar que solamente existen datos comparativos de redes</p>
+
+<p>GSM/3G, dado que el despliegue de la red 4G es muy joven, y dispone de</p>
+
+<p>mejores medidas de seguridad.</p>
+
+<p><span class="underline"><strong>Aplicación en Android </strong></span></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=de.srlabs.gsmmap">https://play.google.com/store/apps/details?id=de.srlabs.gsmmap</a></p>
+
+<p><a href="../images/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-PDF.png"><img src="../images/thumbnails/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense-PDF.png" alt="" /></a></p>
+
+<p>**<span style="font-size: large;">[ Transparencias / Slides</p>
+
+<p>]</span>**</p>
+
+<p>Puedes consultar las transparencia de la presentación que ofreció</p>
+
+<p>Security ResearchLabs en el 31C Security Conference el pasado</p>
+
+<p>30/12/2014.</p>
+
+<p><a href="https://events.ccc.de/congress/2014/Fahrplan/system/attachments/2493/original/Mobile_Self_Defense-Karsten_Nohl-31C3-v1.pdf">Slides</a></p>
+
+<p><span style="font-size: large;">**</p>
+
+<p><strong></span><span style="font-size: large;"></strong>[ Vídeo de la</p>
+
+<p>Presentación ]**</span></p>
+
+<p>En el pasado [31C Chaos Computer Club</p>
+
+<p>Conference](<a href="https://events.ccc.de/congress/2014/Fahrplan/events/6122.html">https://events.ccc.de/congress/2014/Fahrplan/events/6122.html</a>)</p>
+
+<p>Security Research Labs presento su herramienta SnoopSnitch para</p>
+
+<p>demostrar la inseguridad que existe en los protocolos de telefonía</p>
+
+<p>móvil. En su charla demuestran lo &ldquo;barato&rdquo; que resulta interceptar las</p>
+
+<p>comunicaciones GSM/3G utilizando la debilidad del protocolo de</p>
+
+<p>señalización SS7.</p>
+
+<p>**<span style="font-size: large;"></p>
+
+<p></span><span style="font-size: large;">[ References ]</span>**</p>
+
+<p><a href="https://opensource.srlabs.de/projects/snoopsnitch">https://opensource.srlabs.de/projects/snoopsnitch</a></p>
+
+<p><a href="http://gsmmap.org/#!/about">http://gsmmap.org/#!/about</a></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=de.srlabs.snoopsnitch">https://play.google.com/store/apps/details?id=de.srlabs.snoopsnitch</a></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=de.srlabs.gsmmap">https://play.google.com/store/apps/details?id=de.srlabs.gsmmap</a></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://st2labs.github.io/tags/congress/">Congress</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/hacking/">Hacking</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/security/">Security</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/gsm/">GSM</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/3g/">3G</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/31c/">31C</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/mobile/">Mobile</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/defensa/">Defensa</a>&nbsp;
+            
+              <a href="https://st2labs.github.io/tags/map/">Map</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense%2f&amp;text=GSMmap%20%26%20Snoopsnitch%3a%20Android%20App%20to%20Mobile%20Self-Defense&amp;via=seguridadxato2" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense%2f&amp;title=GSMmap%20%26%20Snoopsnitch%3a%20Android%20App%20to%20Mobile%20Self-Defense" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense%2f&amp;title=GSMmap%20%26%20Snoopsnitch%3a%20Android%20App%20to%20Mobile%20Self-Defense" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense%2f&amp;title=GSMmap%20%26%20Snoopsnitch%3a%20Android%20App%20to%20Mobile%20Self-Defense" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fst2labs.github.io%2fpost%2f2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense%2f&amp;description=GSMmap%20%26%20Snoopsnitch%3a%20Android%20App%20to%20Mobile%20Self-Defense" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/">Guia rápida para realizar un Pentesting</a></li>
+                
+                    <li><a href="/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/">Digital Forensics of Android WhatsApp SQLite Database (Part II)</a></li>
+                
+                    <li><a href="/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/">Digital Forensics of Android WhatsApp SQLite Database (Part I)</a></li>
+                
+                    <li><a href="/post/2015-07-03-3ed-master-seguridad-tic-15-16-abierto-plazo-de-matriculacion/">3Ed - Máster Seguridad TIC 15/16 - Abierto Plazo de Matriculación</a></li>
+                
+                    <li><a href="/post/2015-06-20-google-hacking-parte-ii/">Google Hacking Parte II</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://st2labs.github.io/post/2015-04-08-como-elegir-un-antivirus/" data-toggle="tooltip" data-placement="top" title="¿Cómo elegir un Antivirus?">&larr; Artículo anterior</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/" data-toggle="tooltip" data-placement="top" title="Rooting my Nexus 4 with Android 5.0.1">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:info@seguridadparatodos.es" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/st2labs" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/seguridadxato2" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/julianjgonzalez" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="www.st2labs.com">Julian J Gonzalez</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://st2labs.github.io">Seguridad para Todos</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.54.0</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://st2labs.github.io/js/main.js"></script>
+<script src="https://st2labs.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://st2labs.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
