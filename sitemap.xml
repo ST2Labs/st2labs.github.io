@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://st2labs.github.io/post/2021-01-19-cyber-reputation-checks/</loc>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://st2labs.github.io/post/2020-30-03-migration/</loc>
+    <lastmod>2020-03-30T18:31:07+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://st2labs.github.io/post/2019-10-01-guia-rapida-para-realizar-un-pentesting/</loc>
     <lastmod>2019-10-01T09:39:00+02:00</lastmod>
   </url>
@@ -229,7 +239,7 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/audit/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2020-03-30T18:31:07+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -305,6 +315,12 @@
   </url>
   
   <url>
+    <loc>https://st2labs.github.io/tags/cms/</loc>
+    <lastmod>2020-03-30T18:31:07+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://st2labs.github.io/tags/code/</loc>
     <lastmod>2015-12-23T10:50:00+01:00</lastmod>
     <priority>0</priority>
@@ -372,7 +388,7 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/cybersecurity/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -521,6 +537,12 @@
   </url>
   
   <url>
+    <loc>https://st2labs.github.io/tags/gordon/</loc>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://st2labs.github.io/tags/gsm/</loc>
     <lastmod>2015-04-10T15:10:00+02:00</lastmod>
     <priority>0</priority>
@@ -540,7 +562,7 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/hacking/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -552,7 +574,25 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/how-to/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://st2labs.github.io/tags/html5/</loc>
+    <lastmod>2020-03-30T18:31:07+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://st2labs.github.io/tags/hugo/</loc>
+    <lastmod>2020-03-30T18:31:07+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://st2labs.github.io/tags/hunting/</loc>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -583,6 +623,12 @@
   <url>
     <loc>https://st2labs.github.io/tags/internet/</loc>
     <lastmod>2014-10-15T19:27:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://st2labs.github.io/tags/ioc/</loc>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -761,6 +807,12 @@
   </url>
   
   <url>
+    <loc>https://st2labs.github.io/tags/observables/</loc>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://st2labs.github.io/tags/openstack/</loc>
     <lastmod>2018-05-15T18:00:00+02:00</lastmod>
     <priority>0</priority>
@@ -786,13 +838,13 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/pentester/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://st2labs.github.io/tags/pentesting/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -810,7 +862,7 @@
   
   <url>
     <loc>https://st2labs.github.io/post/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -870,7 +922,7 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/reputation/</loc>
-    <lastmod>2016-04-01T16:36:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -948,7 +1000,7 @@
   
   <url>
     <loc>https://st2labs.github.io/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1013,6 +1065,12 @@
   </url>
   
   <url>
+    <loc>https://st2labs.github.io/tags/static/</loc>
+    <lastmod>2020-03-30T18:31:07+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://st2labs.github.io/tags/stic/</loc>
     <lastmod>2014-12-30T12:31:00+01:00</lastmod>
     <priority>0</priority>
@@ -1050,7 +1108,7 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/threat/</loc>
-    <lastmod>2016-04-01T16:36:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1068,7 +1126,7 @@
   
   <url>
     <loc>https://st2labs.github.io/tags/tools/</loc>
-    <lastmod>2019-10-01T09:39:00+02:00</lastmod>
+    <lastmod>2021-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

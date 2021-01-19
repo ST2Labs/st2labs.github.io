@@ -195,7 +195,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Publicado el 26 de enero, 2015
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 16 de enero, 2015
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutos
@@ -227,6 +227,145 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+    <a href="https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/">
+        <h2 class="post-title">Digital Forensics of Android WhatsApp SQLite Database (Part III)</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 16 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1146&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        En este artículo abordaré la recuperación de mensajes borrado en la
+aplicación WhatsApp, como ya comente en la [parte
+I](http://www.seguridadparatodos.es/2015/11/digital-forensics-of-android-whatsapp.html)
+y
+II,
+la capacidad de recuperación de mensajes eliminados es inversamente
+proporcional al periodo de tiempo transcurrido desde que se produjo el
+hecho, así como a la intensidad de uso de la aplicación en dicho
+periodo. Es decir, cuanto mayor sea la intensidad y el tiempo transcurrido menor
+es la probabilidad de recuperar la información.
+        <a href="https://st2labs.github.io/post/2015-12-16-digital-forensics-of-android-whatsapp-sqlite-database-part-iii/" class="post-read-more">[Leer más]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://st2labs.github.io/tags/database/">database</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/dftime/">dftime</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/dfir/">DFIR</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/sqlite/">sqlite</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/forensics/">Forensics</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/whatsapp/">Whatsapp</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/dfsqlite3/">dfsqlite3</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/tool/">tool</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/dfslite/">dfslite</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/">
+        <h2 class="post-title">Digital Forensics of Android WhatsApp SQLite Database (Part II)</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el 2 de enero, 2015
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1284&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        En esta segunda parte, se procederá a recuperar **un mensaje que ha sido
+eliminado** en la base de datos SQLite de la aplicación WhatsApp y se
+analizará la información obtenida para determinar cuando se envío el
+mensaje (timestamp) recuperado.
+Estructura de SQLite (II)
+Una vez que conocemos el esquema de la base de datos, y como se organiza
+la información útil (payload data) dentro de las celdas de cada una de
+        <a href="https://st2labs.github.io/post/2015-12-02-digital-forensics-of-android-whatsapp-sqlite-database-part-ii/" class="post-read-more">[Leer más]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://st2labs.github.io/tags/database/">database</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/seguridad-moviles/">Seguridad Moviles</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/dfir/">DFIR</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/dfsqlite2/">dfsqlite2</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/sqlite/">sqlite</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/forensics/">Forensics</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/whatsapp/">Whatsapp</a>&nbsp;
+        
+        <a href="https://st2labs.github.io/tags/android/">Android</a>&nbsp;
+        
+    </div>
+    
+
+</article>
           
             <article class="post-preview">
     <a href="https://st2labs.github.io/post/2015-11-26-digital-forensics-of-android-whatsapp-sqlite-database-part-i/">
@@ -810,158 +949,6 @@ contraseña de acceso a las cuentas de Google.
 
 </article>
           
-            <article class="post-preview">
-    <a href="https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/">
-        <h2 class="post-title">Rooting my Nexus 4 with Android 5.0.1</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Publicado el 12 de enero, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutos
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;576&nbsp;palabras
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Es inusual escribir en inglés, pero en esta ocasión he preferido hacerlo
-así para ampliar el público objetivo :
-
-First of all, **What do you need to
-start?**
- 1 . **Have USB Driver
-installed** in your system [ I supposed you have Windows]
- 2
-. **Enable
-USB Debbugin Options** ( press 7 times in build info into Settings Menu
-)
-3 . Need have Bootloader unlocked, if you don&rsquo;t, please check out
-        <a href="https://st2labs.github.io/post/2015-04-12-rooting-my-nexus-4-with-android-5-0-1/" class="post-read-more">[Leer más]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://st2labs.github.io/tags/nexus/">Nexus</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/cyanogen/">cyanogen</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/google/">Google</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/custom/">Custom</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/android/">Android</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/lg/">LG</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/mobile/">Mobile</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/lolipop/">lolipop</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/root/">Root</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/security/">Security</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/rom/">ROM</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/rooting/">Rooting</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/">
-        <h2 class="post-title">GSMmap &amp; Snoopsnitch: Android App to Mobile Self-Defense</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Publicado el 10 de enero, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutos
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;812&nbsp;palabras
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Julian J. Gonzalez
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Hace ya un tiempo que os hable en mi charla sobre [In]Seguridad en
-Redes Móviles, en dicha charla os comentaba las debilidades /
-vulnerabilidades que existen en las redes móviles GSM/3G. El año pasado en diciembre de 2014, durante el congreso del [Chaos
-Computer
-Club](http://events.ccc.de/congress/2014/wiki/Static:Main_Page), los
-investigadores de Security ReseachLabs **han
-publicado una vez más las debilidades existentes** en las redes móviles
-actuales, y además, han creado un par de proyectos software libre, el
-        <a href="https://st2labs.github.io/post/2015-04-10-gsmmap-snoopsnitch-android-app-to-mobile-self-defense/" class="post-read-more">[Leer más]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://st2labs.github.io/tags/congress/">Congress</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/hacking/">Hacking</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/security/">Security</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/gsm/">GSM</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/3g/">3G</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/31c/">31C</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/android/">Android</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/mobile/">Mobile</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/defensa/">Defensa</a>&nbsp;
-        
-        <a href="https://st2labs.github.io/tags/map/">Map</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
         </div>
         
           <ul class="pager main-pager">
@@ -1040,7 +1027,7 @@ actuales, y además, han creado un par de proyectos software libre, el
 
           &nbsp;&bull;&nbsp;&copy;
           
-            2019
+            2021
           
 
           

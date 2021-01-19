@@ -151,7 +151,7 @@
     <item>
       <title>Audit</title>
       <link>https://st2labs.github.io/tags/audit/</link>
-      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <pubDate>Mon, 30 Mar 2020 18:31:07 +0200</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/audit/</guid>
       <description></description>
@@ -257,6 +257,15 @@
     </item>
     
     <item>
+      <title>Cms</title>
+      <link>https://st2labs.github.io/tags/cms/</link>
+      <pubDate>Mon, 30 Mar 2020 18:31:07 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/cms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Code</title>
       <link>https://st2labs.github.io/tags/code/</link>
       <pubDate>Wed, 23 Dec 2015 10:50:00 +0100</pubDate>
@@ -358,7 +367,7 @@
     <item>
       <title>Cybersecurity</title>
       <link>https://st2labs.github.io/tags/cybersecurity/</link>
-      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/cybersecurity/</guid>
       <description></description>
@@ -581,6 +590,15 @@
     </item>
     
     <item>
+      <title>Gordon</title>
+      <link>https://st2labs.github.io/tags/gordon/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/gordon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gsm</title>
       <link>https://st2labs.github.io/tags/gsm/</link>
       <pubDate>Fri, 10 Apr 2015 15:10:00 +0200</pubDate>
@@ -610,7 +628,7 @@
     <item>
       <title>Hacking</title>
       <link>https://st2labs.github.io/tags/hacking/</link>
-      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/hacking/</guid>
       <description></description>
@@ -628,9 +646,36 @@
     <item>
       <title>How To</title>
       <link>https://st2labs.github.io/tags/how-to/</link>
-      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/how-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html5</title>
+      <link>https://st2labs.github.io/tags/html5/</link>
+      <pubDate>Mon, 30 Mar 2020 18:31:07 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://st2labs.github.io/tags/hugo/</link>
+      <pubDate>Mon, 30 Mar 2020 18:31:07 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hunting</title>
+      <link>https://st2labs.github.io/tags/hunting/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/hunting/</guid>
       <description></description>
     </item>
     
@@ -676,6 +721,15 @@
       <pubDate>Wed, 15 Oct 2014 19:27:00 +0200</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/internet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ioc</title>
+      <link>https://st2labs.github.io/tags/ioc/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/ioc/</guid>
       <description></description>
     </item>
     
@@ -941,6 +995,15 @@
     </item>
     
     <item>
+      <title>Observables</title>
+      <link>https://st2labs.github.io/tags/observables/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/observables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Openstack</title>
       <link>https://st2labs.github.io/tags/openstack/</link>
       <pubDate>Tue, 15 May 2018 18:00:00 +0200</pubDate>
@@ -979,7 +1042,7 @@
     <item>
       <title>Pentester</title>
       <link>https://st2labs.github.io/tags/pentester/</link>
-      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/pentester/</guid>
       <description></description>
@@ -988,7 +1051,7 @@
     <item>
       <title>Pentesting</title>
       <link>https://st2labs.github.io/tags/pentesting/</link>
-      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/pentesting/</guid>
       <description></description>
@@ -1096,7 +1159,7 @@
     <item>
       <title>Reputation</title>
       <link>https://st2labs.github.io/tags/reputation/</link>
-      <pubDate>Fri, 01 Apr 2016 16:36:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/reputation/</guid>
       <description></description>
@@ -1301,6 +1364,15 @@
     </item>
     
     <item>
+      <title>Static</title>
+      <link>https://st2labs.github.io/tags/static/</link>
+      <pubDate>Mon, 30 Mar 2020 18:31:07 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/tags/static/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Stic</title>
       <link>https://st2labs.github.io/tags/stic/</link>
       <pubDate>Tue, 30 Dec 2014 12:31:00 +0100</pubDate>
@@ -1348,7 +1420,7 @@
     <item>
       <title>Threat</title>
       <link>https://st2labs.github.io/tags/threat/</link>
-      <pubDate>Fri, 01 Apr 2016 16:36:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/threat/</guid>
       <description></description>
@@ -1375,7 +1447,7 @@
     <item>
       <title>Tools</title>
       <link>https://st2labs.github.io/tags/tools/</link>
-      <pubDate>Tue, 01 Oct 2019 09:39:00 +0200</pubDate>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
       <guid>https://st2labs.github.io/tags/tools/</guid>
       <description></description>

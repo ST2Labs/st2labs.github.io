@@ -8,10 +8,30 @@
     <language>en-us</language>
     <managingEditor>info@seguridadparatodos.es (Julian J Gonzalez)</managingEditor>
     <webMaster>info@seguridadparatodos.es (Julian J Gonzalez)</webMaster>
-    <lastBuildDate>Tue, 01 Oct 2019 09:39:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://st2labs.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gordon - Cyber reputation checks</title>
+      <link>https://st2labs.github.io/post/2021-01-19-cyber-reputation-checks/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2021-01-19-cyber-reputation-checks/</guid>
+      <description>Hace casi un (1) año que realice la migración del Blog a &amp;ldquo;GitHub&amp;rdquo; y por H o por B, no he escrito nada desde entonces, uno se va haciendo mayor, tiene menos tiempo o dedica el tiempo libre a otra cosa, sea como fuera, aqui estoy, escribiendo un pequeño articulo en el nuevo año.
+¿Que es Gordon? Es un servicio de analisis y evaluación de la reputación de las evidencias y/o indicadores de compromiso que se obtienen en los sistemas durante el proceso de Auditoria, monitorización y/o invetigación de un incidente.</description>
+    </item>
+    
+    <item>
+      <title>Migration</title>
+      <link>https://st2labs.github.io/post/2020-30-03-migration/</link>
+      <pubDate>Mon, 30 Mar 2020 18:31:07 +0200</pubDate>
+      <author>info@seguridadparatodos.es (Julian J Gonzalez)</author>
+      <guid>https://st2labs.github.io/post/2020-30-03-migration/</guid>
+      <description>Es oficial, acabo de migrar el contenido del Blog desde Blogger a GitHub Pages, utilizando Hugo.
+! Muchas Gracias !</description>
+    </item>
     
     <item>
       <title>Guia rápida para realizar un Pentesting</title>
